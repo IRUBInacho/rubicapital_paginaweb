@@ -35,7 +35,7 @@
       padding: 0 24px;
     }
 
-    /* premium minimal styling */
+    /* Botones */
     .btn-primary {
       background-color: #1E1E1E;
       color: white;
@@ -163,8 +163,9 @@
       border: none;
       font-weight: 600;
       cursor: pointer;
+      white-space: nowrap;
     }
-    /* property cards */
+    /* Property cards */
     .property-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -216,6 +217,7 @@
       margin: 16px 0;
       font-size: 0.85rem;
       color: #5E5A52;
+      flex-wrap: wrap;
     }
     .section-title {
       font-size: 2.5rem;
@@ -232,6 +234,7 @@
     .trust-item, .solution-card {
       text-align: center;
       max-width: 260px;
+      flex: 1 1 200px;
     }
     .trust-icon, .solution-icon {
       font-size: 2.6rem;
@@ -276,12 +279,6 @@
       margin-top: 32px;
       border: 1px solid #EDE7DF;
     }
-    .detail-gallery {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      padding-bottom: 16px;
-    }
     /* Modal */
     .modal {
       display: none;
@@ -306,11 +303,155 @@
       gap: 16px;
       justify-content: center;
       margin: 24px 0;
+      flex-wrap: wrap;
     }
-    @media (max-width: 760px) {
-      .hero h1 { font-size: 2.4rem; }
-      .container { padding: 0 20px; }
-      .filter-row { flex-direction: column; }
+
+    /* ========== RESPONSIVE FIXES ========== */
+    @media (max-width: 1024px) {
+      .container {
+        padding: 0 20px;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .search-panel {
+        padding: 20px;
+      }
+      .filter-row {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .filter-group {
+        width: 100%;
+        min-width: auto;
+      }
+      .btn-search {
+        width: 100%;
+        justify-content: center;
+        margin-top: 8px;
+      }
+      .hero-content {
+        padding: 0 16px;
+      }
+      .property-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .trust-icons, .solutions-grid {
+        gap: 32px;
+        flex-direction: column;
+        align-items: center;
+      }
+      .trust-item, .solution-card {
+        max-width: 100%;
+      }
+      /* About section: cambiar de grid a columna */
+      #aboutSection > div {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      #aboutSection img {
+        height: auto !important;
+        max-height: 480px;
+        width: 100%;
+        object-fit: cover;
+      }
+      .hero {
+        min-height: 80vh;
+      }
+      .region-list {
+        justify-content: center;
+      }
+      footer .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 28px;
+      }
+      /* Navbar responsive */
+      nav .container {
+        flex-direction: column;
+        gap: 12px;
+      }
+      nav .container > div:first-child {
+        font-size: 1.5rem;
+      }
+      nav .container > div:last-child {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .btn-outline, .btn-primary {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+      }
+      .testimonial {
+        padding: 32px 20px;
+        font-size: 1rem;
+      }
+      .section-title {
+        text-align: center;
+      }
+      #allPropertiesGrid .property-card {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .section-title {
+        font-size: 1.75rem;
+      }
+      .price {
+        font-size: 1.4rem;
+      }
+      .card-content {
+        padding: 16px;
+      }
+      .modal-content {
+        padding: 24px 20px;
+      }
+      .role-buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .role-buttons button {
+        width: 100%;
+        justify-content: center;
+      }
+      .search-panel {
+        padding: 16px;
+      }
+    }
+
+    /* Ajustes adicionales para el detalle */
+    .detail-gallery {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 16px;
+    }
+    #detailView img {
+      width: 100%;
+      border-radius: 24px;
+    }
+    #detailView .property-grid {
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    @media (max-width: 640px) {
+      #detailView .property-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -321,7 +462,7 @@
   <nav style="position: sticky; top:0; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); z-index: 100; padding: 16px 0; border-bottom: 1px solid #F0EDE6;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
       <div style="font-size: 1.7rem; font-weight: 600; font-family: 'Cormorant Garamond', serif;">RUBÍ CAPITAL</div>
-      <div style="display: flex; gap: 28px; align-items: center;">
+      <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
         <a href="#" class="nav-link" data-section="home" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Inicio</a>
         <a href="#" class="nav-link" data-section="about" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Why Rubí Capital?</a>
         <a href="#" class="nav-link" data-section="solutions" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Soluciones</a>
@@ -363,7 +504,7 @@
             <div><button class="btn-search" id="applyFiltersBtn"><i class="fas fa-search"></i> Buscar</button></div>
           </div>
         </div>
-        <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center;">
+        <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
           <button class="btn-primary" id="scrollToPropertiesBtn"><i class="fas fa-building"></i> Buscar propiedades</button>
           <button class="btn-outline" id="ownerCtaBtn"><i class="fas fa-key"></i> Publicar mi propiedad</button>
         </div>
@@ -383,115 +524,55 @@
         <div id="allPropertiesGrid" class="property-grid"></div>
       </section>
 
-      <!-- QUIÉNES SOMOS (section integrada) -->
-     ```html
-<section id="aboutSection" style="margin: 120px 0; scroll-margin-top: 100px;">
-  <div style="
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 64px;
-    align-items: center;
-  ">
-
-    <!-- TEXT CONTENT -->
-    <div>
-
-      <span style="
-        display: inline-block;
-        margin-bottom: 18px;
-        font-size: 0.85rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #9A8F84;
-        font-weight: 600;
-      ">
-        Nuestra visión
-      </span>
-
-      <h2 style="
-        font-size: clamp(2.2rem, 4vw, 3.5rem);
-        line-height: 1.05;
-        margin-bottom: 28px;
-        color: #1F1D1B;
-        font-weight: 500;
-        letter-spacing: -0.03em;
-      ">
-        Más que propiedades.<br>
-        Patrimonio, confianza y futuro.
-      </h2>
-
-      <div style="
-        font-size: 1.08rem;
-        line-height: 1.9;
-        color: #4B4743;
-        max-width: 680px;
-      ">
-
-        <p style="margin-bottom: 24px;">
-          En <strong>Rubí Capital</strong> entendemos que una propiedad representa mucho más que una transacción:
-          representa patrimonio, inversión, estabilidad y futuro.
-        </p>
-
-        <p style="margin-bottom: 24px;">
-          Nacimos con la convicción de elevar el estándar del corretaje inmobiliario en Chile,
-          combinando una asesoría cercana con un enfoque estratégico, profesional y profundamente transparente.
-        </p>
-
-        <p style="margin-bottom: 24px;">
-          La firma fue fundada por <strong>Aníbal Rubí</strong>, abogado, corredor de propiedades y especialista
-          en bienes raíces, con amplia experiencia en la industria inmobiliaria.
-        </p>
-
-        <p style="margin-bottom: 24px;">
-          Su experiencia integra una mirada legal, comercial y estratégica del mercado,
-          permitiendo acompañar a cada cliente con mayor seguridad, claridad y respaldo
-          en procesos de venta y arriendo.
-        </p>
-
-        <p>
-          En <strong>Rubí Capital</strong> no creemos en una intermediación genérica.
-          Creemos en un servicio personalizado, cuidadosamente ejecutado y basado en
-          relaciones de largo plazo, confianza y excelencia profesional.
-        </p>
-
-      </div>
-
-      <!-- TRUST LINE -->
-      <div style="
-        margin-top: 36px;
-        padding-top: 28px;
-        border-top: 1px solid rgba(0,0,0,0.08);
-        color: #5B5752;
-        font-size: 1rem;
-        line-height: 1.8;
-      ">
-        Más de <strong>30 años de experiencia</strong> asesorando clientes,
-        familias e inversionistas en el mercado inmobiliario chileno.
-        <br>
-        Un enfoque basado en confianza, respaldo y relaciones de largo plazo.
-      </div>
-
-    </div>
-
-    <!-- IMAGE -->
-    <div>
-      <img
-        src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200"
-        alt="Aníbal Rubí - Rubí Capital"
-        style="
-          width: 100%;
-          height: 760px;
-          object-fit: cover;
-          border-radius: 32px;
-          box-shadow: 0 25px 60px rgba(0,0,0,0.08);
-        "
-      >
-    </div>
-
-  </div>
-</section>
-
-
+      <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
+      <section id="aboutSection" style="margin: 120px 0; scroll-margin-top: 100px;">
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
+          <!-- TEXT CONTENT -->
+          <div>
+            <span style="display: inline-block; margin-bottom: 18px; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9A8F84; font-weight: 600;">
+              Nuestra visión
+            </span>
+            <h2 style="font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.05; margin-bottom: 28px; color: #1F1D1B; font-weight: 500; letter-spacing: -0.03em;">
+              Más que propiedades.<br>
+              Patrimonio, confianza y futuro.
+            </h2>
+            <div style="font-size: 1.08rem; line-height: 1.9; color: #4B4743; max-width: 680px;">
+              <p style="margin-bottom: 24px;">
+                En <strong>Rubí Capital</strong> entendemos que una propiedad representa mucho más que una transacción:
+                representa patrimonio, inversión, estabilidad y futuro.
+              </p>
+              <p style="margin-bottom: 24px;">
+                Nacimos con la convicción de elevar el estándar del corretaje inmobiliario en Chile,
+                combinando una asesoría cercana con un enfoque estratégico, profesional y profundamente transparente.
+              </p>
+              <p style="margin-bottom: 24px;">
+                La firma fue fundada por <strong>Aníbal Rubí</strong>, abogado, corredor de propiedades y especialista
+                en bienes raíces, con amplia experiencia en la industria inmobiliaria.
+              </p>
+              <p style="margin-bottom: 24px;">
+                Su experiencia integra una mirada legal, comercial y estratégica del mercado,
+                permitiendo acompañar a cada cliente con mayor seguridad, claridad y respaldo
+                en procesos de venta y arriendo.
+              </p>
+              <p>
+                En <strong>Rubí Capital</strong> no creemos en una intermediación genérica.
+                Creemos en un servicio personalizado, cuidadosamente ejecutado y basado en
+                relaciones de largo plazo, confianza y excelencia profesional.
+              </p>
+            </div>
+            <div style="margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(0,0,0,0.08); color: #5B5752; font-size: 1rem; line-height: 1.8;">
+              Más de <strong>30 años de experiencia</strong> asesorando clientes,
+              familias e inversionistas en el mercado inmobiliario chileno.
+              <br>
+              Un enfoque basado en confianza, respaldo y relaciones de largo plazo.
+            </div>
+          </div>
+          <!-- IMAGE -->
+          <div>
+            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aníbal Rubí - Rubí Capital" style="width: 100%; height: auto; max-height: 680px; object-fit: cover; border-radius: 32px; box-shadow: 0 25px 60px rgba(0,0,0,0.08);">
+          </div>
+        </div>
+      </section>
 
       <!-- SOLUCIONES INMOBILIARIAS -->
       <section id="solutionsSection" style="margin: 60px 0; scroll-margin-top: 80px;">
@@ -588,7 +669,7 @@
     const detailDiv = document.getElementById("detailView");
     detailDiv.style.display = "block";
     const similar = properties.filter(p => p.type === prop.type && p.id !== prop.id).slice(0,3);
-    detailDiv.innerHTML = `<button id="backHomeBtn" class="btn-outline" style="margin-bottom:24px;"><i class="fas fa-arrow-left"></i> Volver</button><div><img src="${prop.images[0]}" style="width:100%; border-radius: 32px;"><h1>${prop.title}</h1><p class="price">${new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP'}).format(prop.price)}</p><p>${prop.description || "Ubicación privilegiada, acabados de lujo y vistas exclusivas."}</p><div style="display:flex; gap:20px;"><span>🛏 ${prop.beds}</span><span>🛁 ${prop.baths}</span><span>📐 ${prop.area} m²</span></div><div><iframe width="100%" height="250" style="border:0; border-radius:24px;" loading="lazy" src="https://maps.google.com/?q=${encodeURIComponent(prop.address+", "+prop.city)}&output=embed"></iframe></div><div style="background:#F9F8F5; padding:20px;"><h3>Contactar asesor</h3><input id="leadName" placeholder="Nombre"><br><button id="contactLeadBtn" class="btn-primary" style="margin-top:10px;">Enviar</button><a href="https://wa.me/56912345678?text=Hola%20me%20interesa%20${encodeURIComponent(prop.title)}" target="_blank" class="btn-outline">WhatsApp</a></div><div><h3>Asesor: ${prop.agent}</h3></div><div><h3>Similares</h3><div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div></div></div>`;
+    detailDiv.innerHTML = `<button id="backHomeBtn" class="btn-outline" style="margin-bottom:24px;"><i class="fas fa-arrow-left"></i> Volver</button><div><img src="${prop.images[0]}" style="width:100%; border-radius: 32px;"><h1>${prop.title}</h1><p class="price">${new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP'}).format(prop.price)}</p><p>${prop.description || "Ubicación privilegiada, acabados de lujo y vistas exclusivas."}</p><div style="display:flex; gap:20px; flex-wrap:wrap;"><span>🛏 ${prop.beds}</span><span>🛁 ${prop.baths}</span><span>📐 ${prop.area} m²</span></div><div><iframe width="100%" height="250" style="border:0; border-radius:24px;" loading="lazy" src="https://maps.google.com/?q=${encodeURIComponent(prop.address+", "+prop.city)}&output=embed"></iframe></div><div style="background:#F9F8F5; padding:20px;"><h3>Contactar asesor</h3><input id="leadName" placeholder="Nombre" style="width:100%; margin-bottom:8px;"><br><button id="contactLeadBtn" class="btn-primary" style="margin-top:10px;">Enviar</button><a href="https://wa.me/56912345678?text=Hola%20me%20interesa%20${encodeURIComponent(prop.title)}" target="_blank" class="btn-outline" style="margin-left:8px;">WhatsApp</a></div><div><h3>Asesor: ${prop.agent}</h3></div><div><h3>Similares</h3><div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div></div></div>`;
     document.getElementById("backHomeBtn")?.addEventListener("click", () => { document.getElementById("detailView").style.display = "none"; document.getElementById("homeView").style.display = "block"; renderAll(); });
     attachCardEvents();
     document.getElementById("contactLeadBtn")?.addEventListener("click", () => alert("✅ Lead registrado. Te contactaremos pronto."));
@@ -607,7 +688,7 @@
     if(!isAgentLogged) { document.getElementById("adminView").innerHTML = `<div style="padding:40px; text-align:center;"><i class="fas fa-lock"></i> <h3>Acceso restringido</h3><p>Inicia sesión como Agente para administrar propiedades.</p></div>`; return; }
     const adminDiv = document.getElementById("adminView");
     adminDiv.innerHTML = `<h2>Panel de Administración</h2><button id="addPropBtn" class="btn-primary">+ Agregar Propiedad</button><div id="adminList"></div>`;
-    document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
+    document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; flex-wrap:wrap;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
     document.querySelectorAll('.editProp').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); const newTitle = prompt("Nuevo título", properties.find(p=>p.id===id).title); if(newTitle){ properties.find(p=>p.id===id).title = newTitle; saveProperties(); renderAdmin(); renderAll(); } }));
     document.querySelectorAll('.deleteProp').forEach(btn => btn.addEventListener('click', (e) => { if(confirm("Eliminar?")) { properties = properties.filter(p => p.id !== parseInt(btn.dataset.id)); saveProperties(); renderAdmin(); renderAll(); } }));
     document.getElementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id:newId, title:"Nueva Propiedad", transaction:"Venta", price:150000000, beds:2, baths:2, area:80, parking:1, type:"Departamento", city:"Santiago", address:"Nueva dirección", images:["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured:false, agent:"HOME AND TRUST" }); saveProperties(); renderAdmin(); renderAll(); };
@@ -620,7 +701,6 @@
     const container = document.getElementById("regionFilterContainer");
     if(container) { container.innerHTML = regions.map(r => `<span class="region-pill" data-region="${r}">${r}</span>`).join('');
     document.querySelectorAll("[data-region]").forEach(el => el.addEventListener("click", (e) => { currentFilter.city = e.target.innerText; document.getElementById("filterCity").value = currentFilter.city; renderAll(); })); }
-    document.querySelectorAll("[data-type-filter]").forEach(el => el.addEventListener("click", (e) => { currentFilter.type = e.target.innerText.split(' ')[0]; document.getElementById("filterType").value = currentFilter.type; renderAll(); }));
   }
 
   function updateNavUI() { const userSpan = document.getElementById("userStatusSpan"); if(isAgentLogged) { userSpan.innerHTML = `👤 Agente | <button id="logoutBtn" style="background:none; border:none; cursor:pointer;">Cerrar sesión</button>`; document.getElementById("logoutBtn")?.addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; renderAll(); }); } else { userSpan.innerHTML = ""; } }
