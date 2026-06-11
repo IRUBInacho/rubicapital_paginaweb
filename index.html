@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="HOME AND TRUST - Corretaje premium en Chile. Propiedades seleccionadas para venta y arriendo: casas, departamentos, oficinas y más. Confianza y transparencia.">
+  <meta name="description"
+    content="HOME AND TRUST - Corretaje premium en Chile. Propiedades seleccionadas para venta y arriendo: casas, departamentos, oficinas y más. Confianza y transparencia.">
   <title>HOME AND TRUST | Propiedades Premium en Chile</title>
   <!-- Google Fonts & Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     * {
@@ -23,7 +27,10 @@
       line-height: 1.5;
     }
 
-    h1, h2, h3, .serif {
+    h1,
+    h2,
+    h3,
+    .serif {
       font-family: 'Cormorant Garamond', serif;
       font-weight: 500;
       letter-spacing: -0.02em;
@@ -51,11 +58,13 @@
       gap: 8px;
       letter-spacing: 0.3px;
     }
+
     .btn-primary:hover {
       background-color: #3A3A3A;
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     }
+
     .btn-outline {
       background: transparent;
       border: 1px solid #D4CFC4;
@@ -66,15 +75,18 @@
       transition: all 0.2s;
       cursor: pointer;
     }
+
     .btn-outline:hover {
       border-color: #B0976A;
       background: #F9F7F4;
     }
+
     .btn-gold {
       background: #C7B28B;
       color: #1E1E1E;
       border: none;
     }
+
     .btn-gold:hover {
       background: #B0976A;
       color: white;
@@ -83,17 +95,19 @@
     /* Hero */
     .hero {
       min-height: 90vh;
-      background: linear-gradient(107deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.05) 100%), url('https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      background: linear-gradient(107deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%), url('https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
     }
+
     .hero::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(255,255,245,0.08);
+      background: rgba(255, 255, 245, 0.08);
     }
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -101,28 +115,32 @@
       margin: 0 auto;
       text-align: center;
       color: white;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.1);
+      text-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
+
     .hero h1 {
       font-size: 3.8rem;
       font-weight: 500;
       margin-bottom: 1rem;
     }
+
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
       opacity: 0.9;
     }
+
     .search-panel {
-      background: rgba(255,255,255,0.96);
+      background: rgba(255, 255, 255, 0.96);
       border-radius: 32px;
       padding: 24px 28px;
       margin-top: 32px;
-      box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
       text-align: left;
       color: #1E1E1E;
       text-shadow: none;
     }
+
     .filter-row {
       display: flex;
       flex-wrap: wrap;
@@ -130,10 +148,12 @@
       margin-bottom: 20px;
       align-items: flex-end;
     }
+
     .filter-group {
       flex: 1 1 160px;
       min-width: 140px;
     }
+
     .filter-group label {
       font-size: 0.7rem;
       text-transform: uppercase;
@@ -141,7 +161,9 @@
       font-weight: 600;
       color: #7B6E5A;
     }
-    .filter-group select, .filter-group input {
+
+    .filter-group select,
+    .filter-group input {
       width: 100%;
       padding: 10px 6px;
       border: none;
@@ -152,9 +174,12 @@
       outline: none;
       transition: 0.2s;
     }
-    .filter-group select:focus, .filter-group input:focus {
+
+    .filter-group select:focus,
+    .filter-group input:focus {
       border-bottom-color: #C7B28B;
     }
+
     .btn-search {
       background: #1E1E1E;
       color: white;
@@ -165,6 +190,7 @@
       cursor: pointer;
       white-space: nowrap;
     }
+
     /* Property cards */
     .property-grid {
       display: grid;
@@ -172,25 +198,29 @@
       gap: 32px;
       margin-top: 40px;
     }
+
     .property-card {
       background: white;
       border-radius: 20px;
       overflow: hidden;
       transition: all 0.35s cubic-bezier(0.2, 0, 0, 1);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
       border: 1px solid #F0EDE8;
     }
+
     .property-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 25px 35px -12px rgba(0,0,0,0.1);
+      box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.1);
       border-color: #E9E2D7;
     }
+
     .card-img {
       height: 260px;
       background-size: cover;
       background-position: center;
       position: relative;
     }
+
     .status-badge {
       position: absolute;
       top: 16px;
@@ -202,15 +232,18 @@
       font-weight: 600;
       color: #1E1E1E;
     }
+
     .card-content {
       padding: 20px;
     }
+
     .price {
       font-size: 1.65rem;
       font-weight: 700;
       color: #1E1E1E;
       margin-bottom: 6px;
     }
+
     .property-meta {
       display: flex;
       gap: 16px;
@@ -219,34 +252,43 @@
       color: #5E5A52;
       flex-wrap: wrap;
     }
+
     .section-title {
       font-size: 2.5rem;
       margin-bottom: 12px;
       font-weight: 500;
     }
-    .trust-icons, .solutions-grid {
+
+    .trust-icons,
+    .solutions-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 48px;
       justify-content: center;
       margin: 48px 0;
     }
-    .trust-item, .solution-card {
+
+    .trust-item,
+    .solution-card {
       text-align: center;
       max-width: 260px;
       flex: 1 1 200px;
     }
-    .trust-icon, .solution-icon {
+
+    .trust-icon,
+    .solution-icon {
       font-size: 2.6rem;
       color: #C7B28B;
       margin-bottom: 20px;
     }
+
     .region-list {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
       margin: 24px 0 20px;
     }
+
     .region-pill {
       background: #F4F2EF;
       padding: 8px 18px;
@@ -255,9 +297,11 @@
       cursor: pointer;
       transition: 0.2s;
     }
+
     .region-pill:hover {
       background: #E8E1D8;
     }
+
     .testimonial {
       background: #FAF9F7;
       padding: 48px 24px;
@@ -266,12 +310,14 @@
       font-style: italic;
       font-size: 1.2rem;
     }
+
     footer {
       background: #F7F5F2;
       padding: 48px 0 24px;
       margin-top: 60px;
       border-top: 1px solid #EBE5DC;
     }
+
     .admin-panel {
       background: white;
       border-radius: 28px;
@@ -279,17 +325,21 @@
       margin-top: 32px;
       border: 1px solid #EDE7DF;
     }
+
     /* Modal */
     .modal {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
       justify-content: center;
       align-items: center;
       z-index: 1000;
     }
+
     .modal-content {
       background: white;
       padding: 36px 28px;
@@ -298,6 +348,7 @@
       width: 90%;
       text-align: center;
     }
+
     .role-buttons {
       display: flex;
       gap: 16px;
@@ -311,6 +362,7 @@
       .container {
         padding: 0 20px;
       }
+
       .section-title {
         font-size: 2rem;
       }
@@ -320,86 +372,110 @@
       .hero h1 {
         font-size: 2.2rem;
       }
+
       .hero p {
         font-size: 1rem;
       }
+
       .search-panel {
         padding: 20px;
       }
+
       .filter-row {
         flex-direction: column;
         align-items: stretch;
       }
+
       .filter-group {
         width: 100%;
         min-width: auto;
       }
+
       .btn-search {
         width: 100%;
         justify-content: center;
         margin-top: 8px;
       }
+
       .hero-content {
         padding: 0 16px;
       }
+
       .property-grid {
         grid-template-columns: 1fr;
         gap: 24px;
       }
-      .trust-icons, .solutions-grid {
+
+      .trust-icons,
+      .solutions-grid {
         gap: 32px;
         flex-direction: column;
         align-items: center;
       }
-      .trust-item, .solution-card {
+
+      .trust-item,
+      .solution-card {
         max-width: 100%;
       }
+
       /* About section: cambiar de grid a columna */
-      #aboutSection > div {
+      #aboutSection>div {
         grid-template-columns: 1fr !important;
         gap: 32px !important;
       }
+
       #aboutSection img {
         height: auto !important;
         max-height: 480px;
         width: 100%;
         object-fit: cover;
       }
+
       .hero {
         min-height: 80vh;
       }
+
       .region-list {
         justify-content: center;
       }
+
       footer .container {
         flex-direction: column;
         text-align: center;
         gap: 28px;
       }
+
       /* Navbar responsive */
       nav .container {
         flex-direction: column;
         gap: 12px;
       }
-      nav .container > div:first-child {
+
+      nav .container>div:first-child {
         font-size: 1.5rem;
       }
-      nav .container > div:last-child {
+
+      nav .container>div:last-child {
         gap: 16px;
         flex-wrap: wrap;
         justify-content: center;
       }
-      .btn-outline, .btn-primary {
+
+      .btn-outline,
+      .btn-primary {
         padding: 10px 20px;
         font-size: 0.85rem;
       }
+
       .testimonial {
         padding: 32px 20px;
         font-size: 1rem;
       }
+
       .section-title {
         text-align: center;
       }
+
       #allPropertiesGrid .property-card {
         max-width: 100%;
       }
@@ -409,26 +485,33 @@
       .hero h1 {
         font-size: 1.8rem;
       }
+
       .section-title {
         font-size: 1.75rem;
       }
+
       .price {
         font-size: 1.4rem;
       }
+
       .card-content {
         padding: 16px;
       }
+
       .modal-content {
         padding: 24px 20px;
       }
+
       .role-buttons {
         flex-direction: column;
         gap: 12px;
       }
+
       .role-buttons button {
         width: 100%;
         justify-content: center;
       }
+
       .search-panel {
         padding: 16px;
       }
@@ -441,13 +524,16 @@
       overflow-x: auto;
       padding-bottom: 16px;
     }
+
     #detailView img {
       width: 100%;
       border-radius: 24px;
     }
+
     #detailView .property-grid {
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
+
     @media (max-width: 640px) {
       #detailView .property-grid {
         grid-template-columns: 1fr;
@@ -455,270 +541,368 @@
     }
   </style>
 </head>
+
 <body>
 
-<div id="app">
-  <!-- NAVBAR -->
-  <nav style="position: sticky; top:0; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); z-index: 100; padding: 16px 0; border-bottom: 1px solid #F0EDE6;">
-    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-      <div style="font-size: 1.7rem; font-weight: 600; font-family: 'Cormorant Garamond', serif;">R.R. | Rubí Raíces </div>
-      <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
-        <a href="#" class="nav-link" data-section="home" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Inicio</a>
-        <a href="#" class="nav-link" data-section="about" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Why Rubí Capital?</a>
-        <a href="#" class="nav-link" data-section="solutions" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Soluciones</a>
-        <button id="loginBtnNav" class="btn-outline" style="padding: 6px 18px;"><i class="fas fa-user"></i> Iniciar Sesión</button>
-        <span id="userStatusSpan" style="font-size: 0.8rem; font-weight: 500;"></span>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MODAL LOGIN -->
-  <div id="loginModal" class="modal">
-    <div class="modal-content">
-      <i class="fas fa-building" style="font-size: 2rem; color:#C7B28B;"></i>
-      <h3 style="margin: 16px 0;">Acceso HOME AND TRUST</h3>
-      <p>Selecciona tu perfil para continuar</p>
-      <div class="role-buttons">
-        <button id="loginAsAgent" class="btn-primary">Soy Agente</button>
-        <button id="loginAsClient" class="btn-outline">Soy Cliente</button>
-      </div>
-      <p style="margin-top: 20px; font-size: 0.7rem;">Demo: agente → panel administración, cliente → vista estándar</p>
-      <button id="closeModalBtn" style="margin-top: 20px; background: none; border: none; text-decoration: underline; cursor: pointer;">Cerrar</button>
-    </div>
-  </div>
-
-  <!-- HOME VIEW (default) -->
-  <div id="homeView">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-content">
-        <h1>Encuentra tu próximo hogar<br>con confianza</h1>
-        <p>Propiedades seleccionadas para venta y arriendo en Chile.</p>
-        <div class="search-panel">
-          <div class="filter-row" id="filterMainRow">
-            <div class="filter-group"><label>OPERACIÓN</label><select id="globalTransaction"><option value="">Todos</option><option value="Venta">Venta</option><option value="Arriendo">Arriendo</option></select></div>
-            <div class="filter-group"><label>COMUNA</label><input type="text" id="filterCity" placeholder="Las Condes, Vitacura..."></div>
-            <div class="filter-group"><label>TIPO</label><select id="filterType"><option value="">Todos</option><option value="Casa">Casa</option><option value="Departamento">Departamento</option><option value="Parcela">Parcela</option><option value="Oficina">Oficina</option><option value="Local Comercial">Local Comercial</option></select></div>
-            <div class="filter-group"><label>PRECIO MAX</label><input type="number" id="filterMaxPrice" placeholder="CLP"></div>
-            <div class="filter-group"><label>DORM.</label><input type="number" id="filterBeds"></div>
-            <div><button class="btn-search" id="applyFiltersBtn"><i class="fas fa-search"></i> Buscar</button></div>
-          </div>
-        </div>
-        <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-          <button class="btn-primary" id="scrollToPropertiesBtn"><i class="fas fa-building"></i> Buscar propiedades</button>
-          <button class="btn-outline" id="ownerCtaBtn"><i class="fas fa-key"></i> Publicar mi propiedad</button>
+  <div id="app">
+    <!-- NAVBAR -->
+    <nav
+      style="position: sticky; top:0; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); z-index: 100; padding: 16px 0; border-bottom: 1px solid #F0EDE6;">
+      <div class="container"
+        style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+        <div style="font-size: 1.7rem; font-weight: 600; font-family: 'Cormorant Garamond', serif;">Rubí Kapital </div>
+        <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
+          <a href="#" class="nav-link" data-section="home"
+            style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Inicio</a>
+          <a href="#" class="nav-link" data-section="about"
+            style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Why Rubí Kapital?</a>
+          <a href="#" class="nav-link" data-section="solutions"
+            style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Soluciones</a>
+          <button id="loginBtnNav" class="btn-outline" style="padding: 6px 18px;"><i class="fas fa-user"></i> Iniciar
+            Sesión</button>
+          <span id="userStatusSpan" style="font-size: 0.8rem; font-weight: 500;"></span>
         </div>
       </div>
-    </section>
+    </nav>
 
-    <div class="container">
-      <!-- Featured Properties (6) -->
-      <section style="margin: 70px 0 40px;">
-        <h2 class="section-title">Propiedades destacadas</h2>
-        <div id="featuredGrid" class="property-grid"></div>
-      </section>
+    <!-- MODAL LOGIN -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <i class="fas fa-building" style="font-size: 2rem; color:#C7B28B;"></i>
+        <h3 style="margin: 16px 0;">Acceso HOME AND TRUST</h3>
+        <p>Selecciona tu perfil para continuar</p>
+        <div class="role-buttons">
+          <button id="loginAsAgent" class="btn-primary">Soy Agente</button>
+          <button id="loginAsClient" class="btn-outline">Soy Cliente</button>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.7rem;">Demo: agente → panel administración, cliente → vista estándar
+        </p>
+        <button id="closeModalBtn"
+          style="margin-top: 20px; background: none; border: none; text-decoration: underline; cursor: pointer;">Cerrar</button>
+      </div>
+    </div>
 
-      <!-- ALL PROPERTIES GRID -->
-      <section>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;"><h2 class="section-title" style="font-size: 2rem;">Todas las propiedades</h2><span id="resultCount"></span></div>
-        <div id="allPropertiesGrid" class="property-grid"></div>
-      </section>
-
-      <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
-      <section id="aboutSection" style="margin: 120px 0; scroll-margin-top: 100px;">
-        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
-          <!-- TEXT CONTENT -->
-          <div>
-            <span style="display: inline-block; margin-bottom: 18px; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9A8F84; font-weight: 600;">
-              Nuestra visión
-            </span>
-            <h2 style="font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.05; margin-bottom: 28px; color: #1F1D1B; font-weight: 500; letter-spacing: -0.03em;">
-              Más que propiedades.<br>
-              Patrimonio, confianza y futuro.
-            </h2>
-            <div style="font-size: 1.08rem; line-height: 1.9; color: #4B4743; max-width: 680px;">
-              <p style="margin-bottom: 24px;">
-                En <strong>Rubí Capital</strong> entendemos que una propiedad representa mucho más que una transacción:
-                representa patrimonio, inversión, estabilidad y futuro.
-              </p>
-              <p style="margin-bottom: 24px;">
-                Nacimos con la convicción de elevar el estándar del corretaje inmobiliario en Chile,
-                combinando una asesoría cercana con un enfoque estratégico, profesional y profundamente transparente.
-              </p>
-              <p style="margin-bottom: 24px;">
-                La firma fue fundada por <strong>Aníbal Rubí</strong>, abogado, corredor de propiedades y especialista
-                en bienes raíces, con amplia experiencia en la industria inmobiliaria.
-              </p>
-              <p style="margin-bottom: 24px;">
-                Su experiencia integra una mirada legal, comercial y estratégica del mercado,
-                permitiendo acompañar a cada cliente con mayor seguridad, claridad y respaldo
-                en procesos de venta y arriendo.
-              </p>
-              <p>
-                En <strong>Rubí Capital</strong> no creemos en una intermediación genérica.
-                Creemos en un servicio personalizado, cuidadosamente ejecutado y basado en
-                relaciones de largo plazo, confianza y excelencia profesional.
-              </p>
-            </div>
-            <div style="margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(0,0,0,0.08); color: #5B5752; font-size: 1rem; line-height: 1.8;">
-              Más de <strong>30 años de experiencia</strong> asesorando clientes,
-              familias e inversionistas en el mercado inmobiliario chileno.
-              <br>
-              Un enfoque basado en confianza, respaldo y relaciones de largo plazo.
+    <!-- HOME VIEW (default) -->
+    <div id="homeView">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-content">
+          <h1>Encuentra tu próximo hogar<br>con confianza</h1>
+          <p>Propiedades seleccionadas para venta y arriendo en Chile.</p>
+          <div class="search-panel">
+            <div class="filter-row" id="filterMainRow">
+              <div class="filter-group"><label>OPERACIÓN</label><select id="globalTransaction">
+                  <option value="">Todos</option>
+                  <option value="Venta">Venta</option>
+                  <option value="Arriendo">Arriendo</option>
+                </select></div>
+              <div class="filter-group"><label>COMUNA</label><input type="text" id="filterCity"
+                  placeholder="Las Condes, Vitacura..."></div>
+              <div class="filter-group"><label>TIPO</label><select id="filterType">
+                  <option value="">Todos</option>
+                  <option value="Casa">Casa</option>
+                  <option value="Departamento">Departamento</option>
+                  <option value="Parcela">Parcela</option>
+                  <option value="Oficina">Oficina</option>
+                  <option value="Local Comercial">Local Comercial</option>
+                </select></div>
+              <div class="filter-group"><label>PRECIO MAX</label><input type="number" id="filterMaxPrice"
+                  placeholder="CLP"></div>
+              <div class="filter-group"><label>DORM.</label><input type="number" id="filterBeds"></div>
+              <div><button class="btn-search" id="applyFiltersBtn"><i class="fas fa-search"></i> Buscar</button></div>
             </div>
           </div>
-          <!-- IMAGE -->
-          <div>
-            <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Aníbal Rubí - Rubí Capital" style="width: 100%; height: auto; max-height: 680px; object-fit: cover; border-radius: 32px; box-shadow: 0 25px 60px rgba(0,0,0,0.08);">
+          <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn-primary" id="scrollToPropertiesBtn"><i class="fas fa-building"></i> Buscar
+              propiedades</button>
+            <button class="btn-outline" id="ownerCtaBtn"><i class="fas fa-key"></i> Publicar mi propiedad</button>
           </div>
         </div>
       </section>
 
-      <!-- SOLUCIONES INMOBILIARIAS -->
-      <section id="solutionsSection" style="margin: 60px 0; scroll-margin-top: 80px;">
-        <h2 class="section-title" style="text-align: center;">Soluciones Integrales</h2>
-        <div class="solutions-grid">
-          <div class="solution-card"><div class="solution-icon"><i class="fas fa-chart-line"></i></div><h3><strong>Tasación Profesional</strong></h3><p>Valorización precisa con análisis de mercado y data en tiempo real.</p></div>
-          <div class="solution-card"><div class="solution-icon"><i class="fas fa-gavel"></i></div><h3><strong>Asesoría Legal & Notarial</strong></h3><p>Respaldo jurídico en contratos, análisis de títulos y due diligence.</p></div>
-          <div class="solution-card"><div class="solution-icon"><i class="fas fa-home"></i></div><h3><strong>Home Staging Premium</strong></h3><p>Puesta en escena para maximizar el valor percibido y acelerar ventas.</p></div>
-          <div class="solution-card"><div class="solution-icon"><i class="fas fa-chart-pie"></i></div><h3><strong>Gestión de Arriendos</strong></h3><p>Administración, selección de inquilinos y cobranza eficiente.</p></div>
-          <div class="solution-card"><div class="solution-icon"><i class="fas fa-globe-americas"></i></div><h3><strong>Inversiones Inmobiliarias</strong></h3><p>Estrategias para rentabilidad en proyectos y propiedades comerciales.</p></div>
-        </div>
-      </section>
+      <div class="container">
+        <!-- Featured Properties (6) -->
+        <section style="margin: 70px 0 40px;">
+          <h2 class="section-title">Propiedades destacadas</h2>
+          <div id="featuredGrid" class="property-grid"></div>
+        </section>
 
-      <!-- TRUST SECTION -->
-      <section style="margin: 60px 0;"><h2 class="section-title" style="text-align: center;">Más que corretaje. Confianza inmobiliaria.</h2>
-        <div class="trust-icons"><div class="trust-item"><div class="trust-icon"><i class="fas fa-gem"></i></div><h3>Selección de propiedades</h3><p>Curaduría de inmuebles únicos</p></div>
-        <div class="trust-item"><div class="trust-icon"><i class="fas fa-handshake"></i></div><h3>Asesoría personalizada</h3><p>Acompañamiento experto</p></div>
-        <div class="trust-item"><div class="trust-icon"><i class="fas fa-chart-line"></i></div><h3>Transparencia total</h3><p>Procesos claros y justos</p></div></div>
-      </section>
+        <!-- ALL PROPERTIES GRID -->
+        <section>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
+            <h2 class="section-title" style="font-size: 2rem;">Todas las propiedades</h2><span id="resultCount"></span>
+          </div>
+          <div id="allPropertiesGrid" class="property-grid"></div>
+        </section>
 
-      <!-- REGIONS -->
-      <section><h2 class="section-title">Zonas exclusivas</h2><div class="region-list" id="regionFilterContainer"></div><div id="mapPlaceholder" style="height: 240px; background: #E9E3DB; border-radius: 28px; margin: 24px 0; display: flex; align-items: center; justify-content: center; color:#7F6E58;"><i class="fas fa-map-marker-alt"></i> Mapa interactivo Chile — regiones destacadas</div></section>
+        <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
+        <section id="aboutSection" style="margin: 120px 0; scroll-margin-top: 100px;">
+          <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
+            <!-- TEXT CONTENT -->
+            <div>
+              <span
+                style="display: inline-block; margin-bottom: 18px; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9A8F84; font-weight: 600;">
+                Nuestra visión
+              </span>
+              <h2
+                style="font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.05; margin-bottom: 28px; color: #1F1D1B; font-weight: 500; letter-spacing: -0.03em;">
+                Más que propiedades.<br>
+                Patrimonio, confianza y futuro.
+              </h2>
+              <div style="font-size: 1.08rem; line-height: 1.9; color: #4B4743; max-width: 680px;">
+                <p style="margin-bottom: 24px;">
+                  En <strong>Rubí Kapital</strong> entendemos que una propiedad representa mucho más que una
+                  transacción:
+                  representa patrimonio, inversión, estabilidad y futuro.
+                </p>
+                <p style="margin-bottom: 24px;">
+                  Nacimos con la convicción de elevar el estándar del corretaje inmobiliario en Chile,
+                  combinando una asesoría cercana con un enfoque estratégico, profesional y profundamente transparente.
+                </p>
+                <p style="margin-bottom: 24px;">
+                  La firma fue fundada por <strong>Aníbal Rubí</strong>, abogado, corredor de propiedades y especialista
+                  en bienes raíces, con amplia experiencia en la industria inmobiliaria.
+                </p>
+                <p style="margin-bottom: 24px;">
+                  Su experiencia integra una mirada legal, comercial y estratégica del mercado,
+                  permitiendo acompañar a cada cliente con mayor seguridad, claridad y respaldo
+                  en procesos de venta y arriendo.
+                </p>
+                <p>
+                  En <strong>Rubí Kapital</strong> no creemos en una intermediación genérica.
+                  Creemos en un servicio personalizado, cuidadosamente ejecutado y basado en
+                  relaciones de largo plazo, confianza y excelencia profesional.
+                </p>
+              </div>
+              <div
+                style="margin-top: 36px; padding-top: 28px; border-top: 1px solid rgba(0,0,0,0.08); color: #5B5752; font-size: 1rem; line-height: 1.8;">
+                Más de <strong>30 años de experiencia</strong> asesorando clientes,
+                familias e inversionistas en el mercado inmobiliario chileno.
+                <br>
+                Un enfoque basado en confianza, respaldo y relaciones de largo plazo.
+              </div>
+            </div>
+            <!-- IMAGE -->
+            <div>
+              <img
+                src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Aníbal Rubí - Rubí Kapital"
+                style="width: 100%; height: auto; max-height: 680px; object-fit: cover; border-radius: 32px; box-shadow: 0 25px 60px rgba(0,0,0,0.08);">
+            </div>
+          </div>
+        </section>
 
-      <!-- TESTIMONIAL -->
-      <section style="margin: 70px 0;"><div class="testimonial"><i class="fas fa-quote-left" style="color: #C7B28B;"></i> "HOME AND TRUST nos ayudó a vender nuestro departamento en Vitacura en solo 3 semanas. Proceso impecable y transparente."<div style="margin-top: 18px; font-weight: 600;">— María José L., cliente</div></div></section>
+        <!-- SOLUCIONES INMOBILIARIAS -->
+        <section id="solutionsSection" style="margin: 60px 0; scroll-margin-top: 80px;">
+          <h2 class="section-title" style="text-align: center;">Soluciones Integrales</h2>
+          <div class="solutions-grid">
+            <div class="solution-card">
+              <div class="solution-icon"><i class="fas fa-chart-line"></i></div>
+              <h3><strong>Tasación Profesional</strong></h3>
+              <p>Valorización precisa con análisis de mercado y data en tiempo real.</p>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="fas fa-gavel"></i></div>
+              <h3><strong>Asesoría Legal & Notarial</strong></h3>
+              <p>Respaldo jurídico en contratos, análisis de títulos y due diligence.</p>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="fas fa-home"></i></div>
+              <h3><strong>Home Staging Premium</strong></h3>
+              <p>Puesta en escena para maximizar el valor percibido y acelerar ventas.</p>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="fas fa-chart-pie"></i></div>
+              <h3><strong>Gestión de Arriendos</strong></h3>
+              <p>Administración, selección de inquilinos y cobranza eficiente.</p>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="fas fa-globe-americas"></i></div>
+              <h3><strong>Inversiones Inmobiliarias</strong></h3>
+              <p>Estrategias para rentabilidad en proyectos y propiedades comerciales.</p>
+            </div>
+          </div>
+        </section>
 
-      <!-- OWNER CTA -->
-      <section style="background: #FDFBF9; border-radius: 32px; padding: 48px 32px; text-align: center; margin: 60px 0;"><h2 style="font-size: 2rem;">¿Quieres vender o arrendar tu propiedad?</h2><p style="margin: 16px 0;">Te ayudamos a posicionarla estratégicamente.</p><button class="btn-primary btn-gold" id="ownerLeadBtn"><i class="fab fa-whatsapp"></i> Hablar con un asesor</button></section>
+        <!-- TRUST SECTION -->
+        <section style="margin: 60px 0;">
+          <h2 class="section-title" style="text-align: center;">Más que corretaje. Confianza inmobiliaria.</h2>
+          <div class="trust-icons">
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-gem"></i></div>
+              <h3>Selección de propiedades</h3>
+              <p>Curaduría de inmuebles únicos</p>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-handshake"></i></div>
+              <h3>Asesoría personalizada</h3>
+              <p>Acompañamiento experto</p>
+            </div>
+            <div class="trust-item">
+              <div class="trust-icon"><i class="fas fa-chart-line"></i></div>
+              <h3>Transparencia total</h3>
+              <p>Procesos claros y justos</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- REGIONS -->
+        <section>
+          <h2 class="section-title">Zonas exclusivas</h2>
+          <div class="region-list" id="regionFilterContainer"></div>
+          <div id="mapPlaceholder"
+            style="height: 240px; background: #E9E3DB; border-radius: 28px; margin: 24px 0; display: flex; align-items: center; justify-content: center; color:#7F6E58;">
+            <i class="fas fa-map-marker-alt"></i> Mapa interactivo Chile — regiones destacadas
+          </div>
+        </section>
+
+        <!-- TESTIMONIAL -->
+        <section style="margin: 70px 0;">
+          <div class="testimonial"><i class="fas fa-quote-left" style="color: #C7B28B;"></i> "HOME AND TRUST nos ayudó a
+            vender nuestro departamento en Vitacura en solo 3 semanas. Proceso impecable y transparente."<div
+              style="margin-top: 18px; font-weight: 600;">— María José L., cliente</div>
+          </div>
+        </section>
+
+        <!-- OWNER CTA -->
+        <section
+          style="background: #FDFBF9; border-radius: 32px; padding: 48px 32px; text-align: center; margin: 60px 0;">
+          <h2 style="font-size: 2rem;">¿Quieres vender o arrendar tu propiedad?</h2>
+          <p style="margin: 16px 0;">Te ayudamos a posicionarla estratégicamente.</p><button
+            class="btn-primary btn-gold" id="ownerLeadBtn"><i class="fab fa-whatsapp"></i> Hablar con un asesor</button>
+        </section>
+      </div>
     </div>
+
+    <!-- DETAIL VIEW -->
+    <div id="detailView" style="display: none; padding: 40px 20px;" class="container"></div>
+
+    <!-- ADMIN VIEW (only visible if agent logged) -->
+    <div id="adminView" style="display: none;" class="container admin-panel"></div>
   </div>
 
-  <!-- DETAIL VIEW -->
-  <div id="detailView" style="display: none; padding: 40px 20px;" class="container"></div>
+  <footer>
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
+      <div>
+        <h3 style="font-family: 'Cormorant Garamond';">HOME AND TRUST</h3>
+        <p>Corretaje premium en Chile<br>Venta y arriendo de propiedades</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <p><i class="fab fa-whatsapp"></i> +56 9 1234 5678<br><i class="far fa-envelope"></i>
+          hello@homeandtrust.cl<br><i class="fab fa-instagram"></i> @homeandtrust</p>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <p>Política de privacidad<br>Términos y condiciones</p>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 48px; font-size: 0.75rem;">© 2025 HOME AND TRUST – Confianza y
+      transparencia</div>
+  </footer>
 
-  <!-- ADMIN VIEW (only visible if agent logged) -->
-  <div id="adminView" style="display: none;" class="container admin-panel"></div>
-</div>
+  <script>
+    // ---------- DATA ----------
+    let properties = [];
 
-<footer>
-  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
-    <div><h3 style="font-family: 'Cormorant Garamond';">HOME AND TRUST</h3><p>Corretaje premium en Chile<br>Venta y arriendo de propiedades</p></div>
-    <div><h4>Contacto</h4><p><i class="fab fa-whatsapp"></i> +56 9 1234 5678<br><i class="far fa-envelope"></i> hello@homeandtrust.cl<br><i class="fab fa-instagram"></i> @homeandtrust</p></div>
-    <div><h4>Legal</h4><p>Política de privacidad<br>Términos y condiciones</p></div>
-  </div>
-  <div style="text-align: center; margin-top: 48px; font-size: 0.75rem;">© 2025 HOME AND TRUST – Confianza y transparencia</div>
-</footer>
+    function seedProperties() {
+      return [
+        { id: 1, title: "Casa en Chicureo", transaction: "Venta", price: 450000000, beds: 4, baths: 3, area: 220, parking: 2, type: "Casa", city: "Chicureo", address: "Av. Chicureo 456", images: ["https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"], featured: true, agent: "Isidora R." },
+        { id: 2, title: "Depto Las Condes", transaction: "Arriendo", price: 1200000, beds: 2, baths: 2, area: 85, parking: 1, type: "Departamento", city: "Las Condes", address: "Alonso de Córdova", featured: true, agent: "Felipe M." },
+        { id: 3, title: "Parcela Pucón", transaction: "Venta", price: 89000000, beds: 3, baths: 2, area: 5000, parking: 4, type: "Parcela", city: "Pucón", featured: true },
+        { id: 4, title: "Oficina Providencia", transaction: "Venta", price: 185000000, beds: 0, baths: 2, area: 120, parking: 2, type: "Oficina", city: "Providencia", featured: false },
+        { id: 5, title: "Local Comercial Viña", transaction: "Arriendo", price: 2500000, beds: 0, baths: 1, area: 90, parking: 1, type: "Local Comercial", city: "Viña del Mar", featured: true },
+        { id: 6, title: "Casa Vitacura", transaction: "Venta", price: 620000000, beds: 5, baths: 4, area: 340, parking: 3, type: "Casa", city: "Vitacura", featured: true },
+        { id: 7, title: "Depto Lo Barnechea", transaction: "Arriendo", price: 950000, beds: 3, baths: 2, area: 110, parking: 1, type: "Departamento", city: "Lo Barnechea", featured: false },
+        { id: 8, title: "Casa Concón", transaction: "Venta", price: 320000000, beds: 3, baths: 2, area: 170, parking: 2, type: "Casa", city: "Concón", featured: false },
+        { id: 9, title: "Departamento Santiago Centro", transaction: "Venta", price: 135000000, beds: 2, baths: 1, area: 65, parking: 0, type: "Departamento", city: "Santiago", featured: false },
+        { id: 10, title: "Oficina El Golf", transaction: "Arriendo", price: 1800000, beds: 0, baths: 2, area: 95, parking: 2, type: "Oficina", city: "Las Condes", featured: false },
+        { id: 11, title: "Parcela familiar", transaction: "Venta", price: 129000000, beds: 3, baths: 2, area: 8000, parking: 3, type: "Parcela", city: "Pucón", featured: false },
+        { id: 12, title: "Local Gastronómico", transaction: "Arriendo", price: 2100000, beds: 0, baths: 2, area: 130, parking: 2, type: "Local Comercial", city: "Providencia", featured: false },
+        { id: 13, title: "Casa Chicureo Arriendo", transaction: "Arriendo", price: 2800000, beds: 4, baths: 3, area: 200, parking: 2, type: "Casa", city: "Chicureo", featured: false },
+        { id: 14, title: "Depto Viña del Mar", transaction: "Venta", price: 199000000, beds: 3, baths: 2, area: 100, parking: 1, type: "Departamento", city: "Viña del Mar", featured: false },
+        { id: 15, title: "Terreno Pucón", transaction: "Venta", price: 45000000, beds: 0, baths: 0, area: 2000, parking: 0, type: "Parcela", city: "Pucón", featured: false },
+        { id: 16, title: "Oficina premium Vitacura", transaction: "Venta", price: 275000000, beds: 0, baths: 3, area: 180, parking: 3, type: "Oficina", city: "Vitacura", featured: false },
+        { id: 17, title: "Casa Las Condes", transaction: "Arriendo", price: 3200000, beds: 4, baths: 3, area: 230, parking: 2, type: "Casa", city: "Las Condes", featured: false },
+        { id: 18, title: "Departamento Lo Barnechea VT", transaction: "Venta", price: 290000000, beds: 3, baths: 2, area: 120, parking: 2, type: "Departamento", city: "Lo Barnechea", featured: false },
+        { id: 19, title: "Casa Santiago centro", transaction: "Venta", price: 170000000, beds: 3, baths: 1, area: 150, parking: 1, type: "Casa", city: "Santiago", featured: false },
+        { id: 20, title: "Local comercial Vitacura", transaction: "Arriendo", price: 3000000, beds: 0, baths: 1, area: 75, parking: 1, type: "Local Comercial", city: "Vitacura", featured: false }
+      ].map(p => { if (!p.images) p.images = ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"]; if (!p.agent) p.agent = "HOME AND TRUST Asesor"; return p; });
+    }
 
-<script>
-  // ---------- DATA ----------
-  let properties = [];
+    function loadProperties() { const stored = localStorage.getItem("homeandtrust_properties"); if (stored) properties = JSON.parse(stored); else properties = seedProperties(); }
+    function saveProperties() { localStorage.setItem("homeandtrust_properties", JSON.stringify(properties)); }
 
-  function seedProperties() {
-    return [
-      { id:1, title:"Casa en Chicureo", transaction:"Venta", price:450000000, beds:4, baths:3, area:220, parking:2, type:"Casa", city:"Chicureo", address:"Av. Chicureo 456", images:["https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"], featured:true, agent:"Isidora R." },
-      { id:2, title:"Depto Las Condes", transaction:"Arriendo", price:1200000, beds:2, baths:2, area:85, parking:1, type:"Departamento", city:"Las Condes", address:"Alonso de Córdova", featured:true, agent:"Felipe M." },
-      { id:3, title:"Parcela Pucón", transaction:"Venta", price:89000000, beds:3, baths:2, area:5000, parking:4, type:"Parcela", city:"Pucón", featured:true },
-      { id:4, title:"Oficina Providencia", transaction:"Venta", price:185000000, beds:0, baths:2, area:120, parking:2, type:"Oficina", city:"Providencia", featured:false },
-      { id:5, title:"Local Comercial Viña", transaction:"Arriendo", price:2500000, beds:0, baths:1, area:90, parking:1, type:"Local Comercial", city:"Viña del Mar", featured:true },
-      { id:6, title:"Casa Vitacura", transaction:"Venta", price:620000000, beds:5, baths:4, area:340, parking:3, type:"Casa", city:"Vitacura", featured:true },
-      { id:7, title:"Depto Lo Barnechea", transaction:"Arriendo", price:950000, beds:3, baths:2, area:110, parking:1, type:"Departamento", city:"Lo Barnechea", featured:false },
-      { id:8, title:"Casa Concón", transaction:"Venta", price:320000000, beds:3, baths:2, area:170, parking:2, type:"Casa", city:"Concón", featured:false },
-      { id:9, title:"Departamento Santiago Centro", transaction:"Venta", price:135000000, beds:2, baths:1, area:65, parking:0, type:"Departamento", city:"Santiago", featured:false },
-      { id:10, title:"Oficina El Golf", transaction:"Arriendo", price:1800000, beds:0, baths:2, area:95, parking:2, type:"Oficina", city:"Las Condes", featured:false },
-      { id:11, title:"Parcela familiar", transaction:"Venta", price:129000000, beds:3, baths:2, area:8000, parking:3, type:"Parcela", city:"Pucón", featured:false },
-      { id:12, title:"Local Gastronómico", transaction:"Arriendo", price:2100000, beds:0, baths:2, area:130, parking:2, type:"Local Comercial", city:"Providencia", featured:false },
-      { id:13, title:"Casa Chicureo Arriendo", transaction:"Arriendo", price:2800000, beds:4, baths:3, area:200, parking:2, type:"Casa", city:"Chicureo", featured:false },
-      { id:14, title:"Depto Viña del Mar", transaction:"Venta", price:199000000, beds:3, baths:2, area:100, parking:1, type:"Departamento", city:"Viña del Mar", featured:false },
-      { id:15, title:"Terreno Pucón", transaction:"Venta", price:45000000, beds:0, baths:0, area:2000, parking:0, type:"Parcela", city:"Pucón", featured:false },
-      { id:16, title:"Oficina premium Vitacura", transaction:"Venta", price:275000000, beds:0, baths:3, area:180, parking:3, type:"Oficina", city:"Vitacura", featured:false },
-      { id:17, title:"Casa Las Condes", transaction:"Arriendo", price:3200000, beds:4, baths:3, area:230, parking:2, type:"Casa", city:"Las Condes", featured:false },
-      { id:18, title:"Departamento Lo Barnechea VT", transaction:"Venta", price:290000000, beds:3, baths:2, area:120, parking:2, type:"Departamento", city:"Lo Barnechea", featured:false },
-      { id:19, title:"Casa Santiago centro", transaction:"Venta", price:170000000, beds:3, baths:1, area:150, parking:1, type:"Casa", city:"Santiago", featured:false },
-      { id:20, title:"Local comercial Vitacura", transaction:"Arriendo", price:3000000, beds:0, baths:1, area:75, parking:1, type:"Local Comercial", city:"Vitacura", featured:false }
-    ].map(p => { if(!p.images) p.images = ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"]; if(!p.agent) p.agent = "HOME AND TRUST Asesor"; return p; });
-  }
+    let currentFilter = { transaction: "", city: "", type: "", maxPrice: "", beds: "", baths: "" };
+    let isAgentLogged = false;
 
-  function loadProperties() { const stored = localStorage.getItem("homeandtrust_properties"); if(stored) properties = JSON.parse(stored); else properties = seedProperties(); }
-  function saveProperties() { localStorage.setItem("homeandtrust_properties", JSON.stringify(properties)); }
+    function filterProperties() { return properties.filter(p => { if (currentFilter.transaction && p.transaction !== currentFilter.transaction) return false; if (currentFilter.city && !p.city.toLowerCase().includes(currentFilter.city.toLowerCase())) return false; if (currentFilter.type && p.type !== currentFilter.type) return false; if (currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false; if (currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false; if (currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false; return true; }); }
 
-  let currentFilter = { transaction:"", city:"", type:"", maxPrice:"", beds:"", baths:"" };
-  let isAgentLogged = false;
+    function renderCard(p) { return `<div class="property-card" data-id="${p.id}"><div class="card-img" style="background-image: url('${p.images[0]}');"><span class="status-badge">${p.transaction}</span></div><div class="card-content"><div class="price">${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 }).format(p.price)}</div><div style="font-weight: 600;">${p.title}</div><div class="property-meta"><span>🛏 ${p.beds} hab</span><span>🛁 ${p.baths} baños</span><span>📐 ${p.area} m²</span><span>🚗 ${p.parking}</span></div><div>📍 ${p.city}</div><button class="btn-outline view-property-btn" style="margin-top:12px; width:100%;" data-id="${p.id}">Ver propiedad →</button></div></div>`; }
 
-  function filterProperties() { return properties.filter(p => { if(currentFilter.transaction && p.transaction !== currentFilter.transaction) return false; if(currentFilter.city && !p.city.toLowerCase().includes(currentFilter.city.toLowerCase())) return false; if(currentFilter.type && p.type !== currentFilter.type) return false; if(currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false; if(currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false; if(currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false; return true; }); }
+    function attachCardEvents() { document.querySelectorAll('.view-property-btn').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.getAttribute('data-id')); showPropertyDetail(id); })); }
 
-  function renderCard(p) { return `<div class="property-card" data-id="${p.id}"><div class="card-img" style="background-image: url('${p.images[0]}');"><span class="status-badge">${p.transaction}</span></div><div class="card-content"><div class="price">${new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',minimumFractionDigits:0}).format(p.price)}</div><div style="font-weight: 600;">${p.title}</div><div class="property-meta"><span>🛏 ${p.beds} hab</span><span>🛁 ${p.baths} baños</span><span>📐 ${p.area} m²</span><span>🚗 ${p.parking}</span></div><div>📍 ${p.city}</div><button class="btn-outline view-property-btn" style="margin-top:12px; width:100%;" data-id="${p.id}">Ver propiedad →</button></div></div>`; }
+    function showPropertyDetail(id) {
+      const prop = properties.find(p => p.id === id);
+      if (!prop) return;
+      document.getElementById("homeView").style.display = "none";
+      document.getElementById("adminView").style.display = "none";
+      const detailDiv = document.getElementById("detailView");
+      detailDiv.style.display = "block";
+      const similar = properties.filter(p => p.type === prop.type && p.id !== prop.id).slice(0, 3);
+      detailDiv.innerHTML = `<button id="backHomeBtn" class="btn-outline" style="margin-bottom:24px;"><i class="fas fa-arrow-left"></i> Volver</button><div><img src="${prop.images[0]}" style="width:100%; border-radius: 32px;"><h1>${prop.title}</h1><p class="price">${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(prop.price)}</p><p>${prop.description || "Ubicación privilegiada, acabados de lujo y vistas exclusivas."}</p><div style="display:flex; gap:20px; flex-wrap:wrap;"><span>🛏 ${prop.beds}</span><span>🛁 ${prop.baths}</span><span>📐 ${prop.area} m²</span></div><div><iframe width="100%" height="250" style="border:0; border-radius:24px;" loading="lazy" src="https://maps.google.com/?q=${encodeURIComponent(prop.address + ", " + prop.city)}&output=embed"></iframe></div><div style="background:#F9F8F5; padding:20px;"><h3>Contactar asesor</h3><input id="leadName" placeholder="Nombre" style="width:100%; margin-bottom:8px;"><br><button id="contactLeadBtn" class="btn-primary" style="margin-top:10px;">Enviar</button><a href="https://wa.me/56912345678?text=Hola%20me%20interesa%20${encodeURIComponent(prop.title)}" target="_blank" class="btn-outline" style="margin-left:8px;">WhatsApp</a></div><div><h3>Asesor: ${prop.agent}</h3></div><div><h3>Similares</h3><div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div></div></div>`;
+      document.getElementById("backHomeBtn")?.addEventListener("click", () => { document.getElementById("detailView").style.display = "none"; document.getElementById("homeView").style.display = "block"; renderAll(); });
+      attachCardEvents();
+      document.getElementById("contactLeadBtn")?.addEventListener("click", () => alert("✅ Lead registrado. Te contactaremos pronto."));
+    }
 
-  function attachCardEvents() { document.querySelectorAll('.view-property-btn').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.getAttribute('data-id')); showPropertyDetail(id); })); }
+    function renderFeaturedAndAll() {
+      const featured = properties.filter(p => p.featured).slice(0, 6);
+      const filteredAll = filterProperties();
+      document.getElementById("featuredGrid").innerHTML = featured.map(renderCard).join('');
+      document.getElementById("allPropertiesGrid").innerHTML = filteredAll.map(renderCard).join('');
+      document.getElementById("resultCount").innerText = `${filteredAll.length} propiedades encontradas`;
+      attachCardEvents();
+    }
 
-  function showPropertyDetail(id) {
-    const prop = properties.find(p => p.id === id);
-    if(!prop) return;
-    document.getElementById("homeView").style.display = "none";
-    document.getElementById("adminView").style.display = "none";
-    const detailDiv = document.getElementById("detailView");
-    detailDiv.style.display = "block";
-    const similar = properties.filter(p => p.type === prop.type && p.id !== prop.id).slice(0,3);
-    detailDiv.innerHTML = `<button id="backHomeBtn" class="btn-outline" style="margin-bottom:24px;"><i class="fas fa-arrow-left"></i> Volver</button><div><img src="${prop.images[0]}" style="width:100%; border-radius: 32px;"><h1>${prop.title}</h1><p class="price">${new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP'}).format(prop.price)}</p><p>${prop.description || "Ubicación privilegiada, acabados de lujo y vistas exclusivas."}</p><div style="display:flex; gap:20px; flex-wrap:wrap;"><span>🛏 ${prop.beds}</span><span>🛁 ${prop.baths}</span><span>📐 ${prop.area} m²</span></div><div><iframe width="100%" height="250" style="border:0; border-radius:24px;" loading="lazy" src="https://maps.google.com/?q=${encodeURIComponent(prop.address+", "+prop.city)}&output=embed"></iframe></div><div style="background:#F9F8F5; padding:20px;"><h3>Contactar asesor</h3><input id="leadName" placeholder="Nombre" style="width:100%; margin-bottom:8px;"><br><button id="contactLeadBtn" class="btn-primary" style="margin-top:10px;">Enviar</button><a href="https://wa.me/56912345678?text=Hola%20me%20interesa%20${encodeURIComponent(prop.title)}" target="_blank" class="btn-outline" style="margin-left:8px;">WhatsApp</a></div><div><h3>Asesor: ${prop.agent}</h3></div><div><h3>Similares</h3><div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div></div></div>`;
-    document.getElementById("backHomeBtn")?.addEventListener("click", () => { document.getElementById("detailView").style.display = "none"; document.getElementById("homeView").style.display = "block"; renderAll(); });
-    attachCardEvents();
-    document.getElementById("contactLeadBtn")?.addEventListener("click", () => alert("✅ Lead registrado. Te contactaremos pronto."));
-  }
+    function renderAdmin() {
+      if (!isAgentLogged) { document.getElementById("adminView").innerHTML = `<div style="padding:40px; text-align:center;"><i class="fas fa-lock"></i> <h3>Acceso restringido</h3><p>Inicia sesión como Agente para administrar propiedades.</p></div>`; return; }
+      const adminDiv = document.getElementById("adminView");
+      adminDiv.innerHTML = `<h2>Panel de Administración</h2><button id="addPropBtn" class="btn-primary">+ Agregar Propiedad</button><div id="adminList"></div>`;
+      document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; flex-wrap:wrap;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
+      document.querySelectorAll('.editProp').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); const newTitle = prompt("Nuevo título", properties.find(p => p.id === id).title); if (newTitle) { properties.find(p => p.id === id).title = newTitle; saveProperties(); renderAdmin(); renderAll(); } }));
+      document.querySelectorAll('.deleteProp').forEach(btn => btn.addEventListener('click', (e) => { if (confirm("Eliminar?")) { properties = properties.filter(p => p.id !== parseInt(btn.dataset.id)); saveProperties(); renderAdmin(); renderAll(); } }));
+      document.getEflementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id: newId, title: "Nueva Propiedad", transaction: "Venta", price: 150000000, beds: 2, baths: 2, area: 80, parking: 1, type: "Departamento", city: "Santiago", address: "Nueva dirección", images: ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured: false, agent: "HOME AND TRUST" }); saveProperties(); renderAdmin(); renderAll(); };
+    }
 
-  function renderFeaturedAndAll() {
-    const featured = properties.filter(p => p.featured).slice(0,6);
-    const filteredAll = filterProperties();
-    document.getElementById("featuredGrid").innerHTML = featured.map(renderCard).join('');
-    document.getElementById("allPropertiesGrid").innerHTML = filteredAll.map(renderCard).join('');
-    document.getElementById("resultCount").innerText = `${filteredAll.length} propiedades encontradas`;
-    attachCardEvents();
-  }
+    function renderAll() { renderFeaturedAndAll(); if (document.getElementById("homeView").style.display !== "none") attachRegionFilters(); }
 
-  function renderAdmin() { 
-    if(!isAgentLogged) { document.getElementById("adminView").innerHTML = `<div style="padding:40px; text-align:center;"><i class="fas fa-lock"></i> <h3>Acceso restringido</h3><p>Inicia sesión como Agente para administrar propiedades.</p></div>`; return; }
-    const adminDiv = document.getElementById("adminView");
-    adminDiv.innerHTML = `<h2>Panel de Administración</h2><button id="addPropBtn" class="btn-primary">+ Agregar Propiedad</button><div id="adminList"></div>`;
-    document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; flex-wrap:wrap;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
-    document.querySelectorAll('.editProp').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); const newTitle = prompt("Nuevo título", properties.find(p=>p.id===id).title); if(newTitle){ properties.find(p=>p.id===id).title = newTitle; saveProperties(); renderAdmin(); renderAll(); } }));
-    document.querySelectorAll('.deleteProp').forEach(btn => btn.addEventListener('click', (e) => { if(confirm("Eliminar?")) { properties = properties.filter(p => p.id !== parseInt(btn.dataset.id)); saveProperties(); renderAdmin(); renderAll(); } }));
-    document.getEflementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id:newId, title:"Nueva Propiedad", transaction:"Venta", price:150000000, beds:2, baths:2, area:80, parking:1, type:"Departamento", city:"Santiago", address:"Nueva dirección", images:["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured:false, agent:"HOME AND TRUST" }); saveProperties(); renderAdmin(); renderAll(); };
-  }
+    function attachRegionFilters() {
+      const regions = ["Santiago", "Chicureo", "Las Condes", "Vitacura", "Lo Barnechea", "Providencia", "Viña del Mar", "Concón", "Pucón"];
+      const container = document.getElementById("regionFilterContainer");
+      if (container) {
+        container.innerHTML = regions.map(r => `<span class="region-pill" data-region="${r}">${r}</span>`).join('');
+        document.querySelectorAll("[data-region]").forEach(el => el.addEventListener("click", (e) => { currentFilter.city = e.target.innerText; document.getElementById("filterCity").value = currentFilter.city; renderAll(); }));
+      }
+    }
 
-  function renderAll() { renderFeaturedAndAll(); if(document.getElementById("homeView").style.display !== "none") attachRegionFilters(); }
+    function updateNavUI() { const userSpan = document.getElementById("userStatusSpan"); if (isAgentLogged) { userSpan.innerHTML = `👤 Agente | <button id="logoutBtn" style="background:none; border:none; cursor:pointer;">Cerrar sesión</button>`; document.getElementById("logoutBtn")?.addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; renderAll(); }); } else { userSpan.innerHTML = ""; } }
 
-  function attachRegionFilters() {
-    const regions = ["Santiago","Chicureo","Las Condes","Vitacura","Lo Barnechea","Providencia","Viña del Mar","Concón","Pucón"];
-    const container = document.getElementById("regionFilterContainer");
-    if(container) { container.innerHTML = regions.map(r => `<span class="region-pill" data-region="${r}">${r}</span>`).join('');
-    document.querySelectorAll("[data-region]").forEach(el => el.addEventListener("click", (e) => { currentFilter.city = e.target.innerText; document.getElementById("filterCity").value = currentFilter.city; renderAll(); })); }
-  }
+    function initSession() { const storedAgent = localStorage.getItem("agent_logged"); if (storedAgent === "true") isAgentLogged = true; updateNavUI(); }
 
-  function updateNavUI() { const userSpan = document.getElementById("userStatusSpan"); if(isAgentLogged) { userSpan.innerHTML = `👤 Agente | <button id="logoutBtn" style="background:none; border:none; cursor:pointer;">Cerrar sesión</button>`; document.getElementById("logoutBtn")?.addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; renderAll(); }); } else { userSpan.innerHTML = ""; } }
+    // Event binding global
+    document.getElementById("applyFiltersBtn")?.addEventListener("click", () => { currentFilter.transaction = document.getElementById("globalTransaction").value; currentFilter.city = document.getElementById("filterCity").value; currentFilter.type = document.getElementById("filterType").value; currentFilter.maxPrice = document.getElementById("filterMaxPrice").value; currentFilter.beds = document.getElementById("filterBeds").value; currentFilter.baths = document.getElementById("filterBaths").value; renderAll(); });
+    document.getElementById("scrollToPropertiesBtn")?.addEventListener("click", () => document.getElementById("allPropertiesGrid").scrollIntoView({ behavior: "smooth" }));
+    document.getElementById("ownerCtaBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Quiero%20publicar%20mi%20propiedad", "_blank"));
+    document.getElementById("ownerLeadBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Necesito%20asesoría", "_blank"));
+    document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", (e) => { e.preventDefault(); const section = link.dataset.section; document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; if (section === "about") document.getElementById("aboutSection").scrollIntoView({ behavior: "smooth" }); else if (section === "solutions") document.getElementById("solutionsSection").scrollIntoView({ behavior: "smooth" }); else window.scrollTo({ top: 0, behavior: "smooth" }); renderAll(); }));
+    document.getElementById("loginBtnNav").addEventListener("click", () => document.getElementById("loginModal").style.display = "flex");
+    document.getElementById("closeModalBtn").addEventListener("click", () => document.getElementById("loginModal").style.display = "none");
+    document.getElementById("loginAsAgent").addEventListener("click", () => { isAgentLogged = true; localStorage.setItem("agent_logged", "true"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; document.getElementById("homeView").style.display = "none"; document.getElementById("adminView").style.display = "block"; renderAdmin(); });
+    document.getElementById("loginAsClient").addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; alert("Bienvenido, ahora visualizas como cliente. Puedes explorar propiedades."); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; renderAll(); });
 
-  function initSession() { const storedAgent = localStorage.getItem("agent_logged"); if(storedAgent === "true") isAgentLogged = true; updateNavUI(); }
-
-  // Event binding global
-  document.getElementById("applyFiltersBtn")?.addEventListener("click", () => { currentFilter.transaction = document.getElementById("globalTransaction").value; currentFilter.city = document.getElementById("filterCity").value; currentFilter.type = document.getElementById("filterType").value; currentFilter.maxPrice = document.getElementById("filterMaxPrice").value; currentFilter.beds = document.getElementById("filterBeds").value; currentFilter.baths = document.getElementById("filterBaths").value; renderAll(); });
-  document.getElementById("scrollToPropertiesBtn")?.addEventListener("click", () => document.getElementById("allPropertiesGrid").scrollIntoView({behavior:"smooth"}));
-  document.getElementById("ownerCtaBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Quiero%20publicar%20mi%20propiedad","_blank"));
-  document.getElementById("ownerLeadBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Necesito%20asesoría","_blank"));
-  document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", (e) => { e.preventDefault(); const section = link.dataset.section; document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; if(section === "about") document.getElementById("aboutSection").scrollIntoView({behavior:"smooth"}); else if(section === "solutions") document.getElementById("solutionsSection").scrollIntoView({behavior:"smooth"}); else window.scrollTo({top:0,behavior:"smooth"}); renderAll(); }));
-  document.getElementById("loginBtnNav").addEventListener("click", () => document.getElementById("loginModal").style.display = "flex");
-  document.getElementById("closeModalBtn").addEventListener("click", () => document.getElementById("loginModal").style.display = "none");
-  document.getElementById("loginAsAgent").addEventListener("click", () => { isAgentLogged = true; localStorage.setItem("agent_logged","true"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; document.getElementById("homeView").style.display = "none"; document.getElementById("adminView").style.display = "block"; renderAdmin(); });
-  document.getElementById("loginAsClient").addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; alert("Bienvenido, ahora visualizas como cliente. Puedes explorar propiedades."); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; renderAll(); });
-  
-  loadProperties(); initSession(); renderAll(); attachRegionFilters();
-</script>
+    loadProperties(); initSession(); renderAll(); attachRegionFilters();
+  </script>
 </body>
+
 </html>
