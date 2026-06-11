@@ -357,6 +357,41 @@
       flex-wrap: wrap;
     }
 
+    /* ========== SECTION & EDITORIAL UTILITIES ========== */
+    .bg-white { background-color: #FFFFFF; }
+    .bg-ivory { background-color: #FAF9F7; }
+    .bg-warm { background-color: #FDFBF9; }
+    .bg-dark { background-color: #1E1E1E; color: white; }
+    
+    .section-spacing {
+      padding: clamp(60px, 8vw, 120px) 0;
+    }
+    
+    .editorial-eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .bg-white .editorial-eyebrow,
+    .bg-ivory .editorial-eyebrow,
+    .bg-warm .editorial-eyebrow { color: #9A8F84; }
+    .bg-dark .editorial-eyebrow { color: #C7B28B; }
+
+    .bg-dark .section-title,
+    .bg-dark h2,
+    .bg-dark h3,
+    .bg-dark p { color: white; }
+    
+    .bg-dark .trust-item, 
+    .bg-dark .solution-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     /* ========== RESPONSIVE & PREMIUM LUXURY STYLE SYSTEM ========== */
 
     .main-navbar {
@@ -820,28 +855,32 @@
         </div>
       </section>
 
-      <div class="container">
-        <!-- Featured Properties (6) -->
-        <section style="margin: 70px 0 40px;">
+      <!-- Featured Properties (6) -->
+      <section class="section-spacing bg-ivory" style="padding-top: 60px;">
+        <div class="container">
+          <div class="editorial-eyebrow">Exclusividad</div>
           <h2 class="section-title">Propiedades destacadas</h2>
           <div id="featuredGrid" class="property-grid"></div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ALL PROPERTIES GRID -->
-        <section>
+      <!-- ALL PROPERTIES GRID -->
+      <section class="section-spacing bg-white" style="padding-top: 20px;">
+        <div class="container">
           <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap;">
             <h2 class="section-title" style="font-size: 2rem;">Todas las propiedades</h2><span id="resultCount"></span>
           </div>
           <div id="allPropertiesGrid" class="property-grid"></div>
-        </section>
+        </div>
+      </section>
 
-        <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
-        <section id="aboutSection" style="margin: 120px 0; scroll-margin-top: 100px;">
+      <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
+      <section id="aboutSection" class="section-spacing bg-warm" style="scroll-margin-top: 100px;">
+        <div class="container">
           <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
             <!-- TEXT CONTENT -->
             <div>
-              <span
-                style="display: inline-block; margin-bottom: 18px; font-size: 0.85rem; letter-spacing: 0.12em; text-transform: uppercase; color: #9A8F84; font-weight: 600;">
+              <span class="editorial-eyebrow">
                 Nuestra visión
               </span>
               <h2
@@ -890,10 +929,13 @@
                 style="width: 100%; height: auto; max-height: 680px; object-fit: cover; border-radius: 32px; box-shadow: 0 25px 60px rgba(0,0,0,0.08);">
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- SOLUCIONES INMOBILIARIAS -->
-        <section id="solutionsSection" style="margin: 60px 0; scroll-margin-top: 80px;">
+      <!-- SOLUCIONES INMOBILIARIAS -->
+      <section id="solutionsSection" class="section-spacing bg-white" style="scroll-margin-top: 80px;">
+        <div class="container">
+          <div class="editorial-eyebrow" style="display: block; text-align: center;">Servicios</div>
           <h2 class="section-title" style="text-align: center;">Soluciones Integrales</h2>
           <div class="solutions-grid">
             <div class="solution-card">
@@ -922,10 +964,13 @@
               <p>Estrategias para rentabilidad en proyectos y propiedades comerciales.</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- TRUST SECTION -->
-        <section style="margin: 60px 0;">
+      <!-- TRUST SECTION -->
+      <section class="section-spacing bg-dark">
+        <div class="container">
+          <div class="editorial-eyebrow" style="display: block; text-align: center;">Nuestra Promesa</div>
           <h2 class="section-title" style="text-align: center;">Más que corretaje. Confianza inmobiliaria.</h2>
           <div class="trust-icons">
             <div class="trust-item">
@@ -944,35 +989,45 @@
               <p>Procesos claros y justos</p>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- REGIONS -->
-        <section>
+      <!-- REGIONS -->
+      <section class="section-spacing bg-ivory">
+        <div class="container">
+          <div class="editorial-eyebrow">Cobertura</div>
           <h2 class="section-title">Zonas exclusivas</h2>
           <div class="region-list" id="regionFilterContainer"></div>
           <div id="mapPlaceholder"
             style="height: 240px; background: #E9E3DB; border-radius: 28px; margin: 24px 0; display: flex; align-items: center; justify-content: center; color:#7F6E58;">
             <i class="fas fa-map-marker-alt"></i> Mapa interactivo Chile — regiones destacadas
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- TESTIMONIAL -->
-        <section style="margin: 70px 0;">
+      <!-- TESTIMONIAL -->
+      <section class="section-spacing bg-white" style="padding-top: 20px;">
+        <div class="container">
           <div class="testimonial"><i class="fas fa-quote-left" style="color: #C7B28B;"></i> "HOME AND TRUST nos ayudó a
             vender nuestro departamento en Vitacura en solo 3 semanas. Proceso impecable y transparente."<div
               style="margin-top: 18px; font-weight: 600;">— María José L., cliente</div>
           </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- OWNER CTA -->
-        <section
-          style="background: #FDFBF9; border-radius: 32px; padding: 48px 32px; text-align: center; margin: 60px 0;">
-          <h2 style="font-size: 2rem;">¿Quieres vender o arrendar tu propiedad?</h2>
-          <p style="margin: 16px 0;">Te ayudamos a posicionarla estratégicamente.</p><button
-            class="btn-primary btn-gold" id="ownerLeadBtn"><i class="fab fa-whatsapp"></i> Hablar con un asesor</button>
-        </section>
-      </div>
-    </div>
+      <!-- OWNER CTA -->
+      <section class="section-spacing bg-white" style="padding-top: 0;">
+        <div class="container">
+          <div style="background: #FDFBF9; border-radius: 32px; padding: 64px 32px; text-align: center; border: 1px solid #EBE5DC;">
+            <div class="editorial-eyebrow">Asesoría Premium</div>
+            <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 12px; font-family: 'Cormorant Garamond', serif; font-weight: 500;">¿Quieres vender o arrendar tu propiedad?</h2>
+            <p style="margin-bottom: 24px; font-size: 1.1rem; color: #5B5752;">Te ayudamos a posicionarla estratégicamente en el mercado.</p>
+            <button class="btn-primary btn-gold" id="ownerLeadBtn"><i class="fab fa-whatsapp"></i> Hablar con un asesor</button>
+          </div>
+        </div>
+      </section>
+
 
     <!-- DETAIL VIEW -->
     <div id="detailView" style="display: none; padding: 40px 20px;" class="container"></div>
