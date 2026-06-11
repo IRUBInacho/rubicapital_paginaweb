@@ -461,7 +461,7 @@
   <!-- NAVBAR -->
   <nav style="position: sticky; top:0; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); z-index: 100; padding: 16px 0; border-bottom: 1px solid #F0EDE6;">
     <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-      <div style="font-size: 1.7rem; font-weight: 600; font-family: 'Cormorant Garamond', serif;">RUBÍ CAPITAL</div>
+      <div style="font-size: 1.7rem; font-weight: 600; font-family: 'Cormorant Garamond', serif;">RUBÍ KAPITAL</div>
       <div style="display: flex; gap: 28px; align-items: center; flex-wrap: wrap;">
         <a href="#" class="nav-link" data-section="home" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Inicio</a>
         <a href="#" class="nav-link" data-section="about" style="text-decoration: none; color: #1E1E1E; font-weight: 500;">Why Rubí Capital?</a>
@@ -691,7 +691,7 @@
     document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; flex-wrap:wrap;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
     document.querySelectorAll('.editProp').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); const newTitle = prompt("Nuevo título", properties.find(p=>p.id===id).title); if(newTitle){ properties.find(p=>p.id===id).title = newTitle; saveProperties(); renderAdmin(); renderAll(); } }));
     document.querySelectorAll('.deleteProp').forEach(btn => btn.addEventListener('click', (e) => { if(confirm("Eliminar?")) { properties = properties.filter(p => p.id !== parseInt(btn.dataset.id)); saveProperties(); renderAdmin(); renderAll(); } }));
-    document.getElementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id:newId, title:"Nueva Propiedad", transaction:"Venta", price:150000000, beds:2, baths:2, area:80, parking:1, type:"Departamento", city:"Santiago", address:"Nueva dirección", images:["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured:false, agent:"HOME AND TRUST" }); saveProperties(); renderAdmin(); renderAll(); };
+    document.getEflementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id:newId, title:"Nueva Propiedad", transaction:"Venta", price:150000000, beds:2, baths:2, area:80, parking:1, type:"Departamento", city:"Santiago", address:"Nueva dirección", images:["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured:false, agent:"HOME AND TRUST" }); saveProperties(); renderAdmin(); renderAll(); };
   }
 
   function renderAll() { renderFeaturedAndAll(); if(document.getElementById("homeView").style.display !== "none") attachRegionFilters(); }
