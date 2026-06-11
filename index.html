@@ -532,44 +532,54 @@
 
       /* Search Panel optimized for thumb UX */
       .search-panel {
-        border-radius: 24px;
-        padding: 20px 24px;
-        margin-top: 24px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        padding: 16px 20px;
+        margin-top: 20px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
       }
       
       .filter-row {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-        margin-bottom: 12px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 8px;
+      }
+
+      /* Make Comuna span both columns */
+      .filter-row > .filter-group:nth-child(2) {
+        grid-column: span 2;
+      }
+
+      /* Make the button div span both columns */
+      .filter-row > div:last-child {
+        grid-column: span 2;
       }
       
       .filter-group {
         width: 100%;
         min-width: auto;
         border-bottom: 1px solid #E2DCD2;
-        padding-bottom: 8px;
+        padding-bottom: 4px;
       }
       
       .filter-group label {
-        font-size: 0.65rem;
-        letter-spacing: 1.5px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
       }
       
       .filter-group select,
       .filter-group input {
         border-bottom: none;
-        padding: 8px 0;
-        font-size: 1rem;
+        padding: 4px 0;
+        font-size: 0.95rem;
       }
       
       .btn-search {
         width: 100%;
-        padding: 14px 20px;
-        font-size: 1rem;
+        padding: 12px 20px;
+        font-size: 0.95rem;
         border-radius: 30px;
-        margin-top: 8px;
+        margin-top: 4px;
         justify-content: center;
         display: flex;
         align-items: center;
