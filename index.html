@@ -1080,7 +1080,6 @@
           <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
             <button class="btn-primary" id="scrollToPropertiesBtn"><i class="fas fa-building"></i> Buscar
               propiedades</button>
-            <button class="btn-outline" id="ownerCtaBtn"><i class="fas fa-key"></i> Publicar mi propiedad</button>
           </div>
         </div>
       </section>
@@ -1624,9 +1623,16 @@
     function initSession() { const storedAgent = localStorage.getItem("agent_logged"); if (storedAgent === "true") isAgentLogged = true; updateNavUI(); }
 
     // Event binding global
-    document.getElementById("applyFiltersBtn")?.addEventListener("click", () => { currentFilter.transaction = document.getElementById("globalTransaction").value; currentFilter.city = document.getElementById("filterCity").value; currentFilter.type = document.getElementById("filterType").value; currentFilter.maxPrice = document.getElementById("filterMaxPrice").value; currentFilter.beds = document.getElementById("filterBeds").value; currentFilter.baths = document.getElementById("filterBaths").value; renderAll(); });
+    document.getElementById("applyFiltersBtn")?.addEventListener("click", () => {
+      currentFilter.transaction = document.getElementById("globalTransaction")?.value || "";
+      currentFilter.city = document.getElementById("filterCity")?.value || "";
+      currentFilter.type = document.getElementById("filterType")?.value || "";
+      currentFilter.maxPrice = document.getElementById("filterMaxPrice")?.value || "";
+      currentFilter.beds = document.getElementById("filterBeds")?.value || "";
+      currentFilter.baths = document.getElementById("filterBaths")?.value || "";
+      renderAll();
+    });
     document.getElementById("scrollToPropertiesBtn")?.addEventListener("click", () => document.getElementById("allPropertiesGrid").scrollIntoView({ behavior: "smooth" }));
-    document.getElementById("ownerCtaBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Quiero%20publicar%20mi%20propiedad", "_blank"));
     document.getElementById("ownerLeadBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Necesito%20asesoría", "_blank"));
     document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", (e) => { e.preventDefault(); const section = link.dataset.section; document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; if (section === "about") document.getElementById("aboutSection").scrollIntoView({ behavior: "smooth" }); else if (section === "solutions") document.getElementById("solutionsSection").scrollIntoView({ behavior: "smooth" }); else window.scrollTo({ top: 0, behavior: "smooth" }); renderAll(); }));
     document.getElementById("loginBtnNav").addEventListener("click", () => document.getElementById("loginModal").style.display = "flex");
