@@ -983,9 +983,21 @@
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 64px;
+      align-items: center;
+    }
+
     @media (max-width: 900px) {
       .detail-info-grid {
         grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
 
       .contact-card {
@@ -996,6 +1008,11 @@
     @media (max-width: 640px) {
       .footer-cols {
         grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
       }
 
       #detailView .property-grid {
@@ -1163,7 +1180,7 @@
       </section>
 
       <!-- Featured Properties (6) -->
-      <section class="section-spacing bg-ivory" style="padding-top: 60px;">
+      <section class="section-spacing bg-ivory" style="padding-top: 60px; display: none;">
         <div class="container">
           <div class="editorial-eyebrow">Exclusividad</div>
           <h2 class="section-title">Propiedades destacadas</h2>
@@ -1184,7 +1201,7 @@
       <!-- QUIÉNES SOMOS section (totalmente responsiva) -->
       <section id="aboutSection" class="section-spacing bg-warm" style="scroll-margin-top: 100px;">
         <div class="container">
-          <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center;">
+          <div class="about-grid">
             <!-- TEXT CONTENT -->
             <div>
               <span class="editorial-eyebrow">
