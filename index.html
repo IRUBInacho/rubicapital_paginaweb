@@ -95,7 +95,7 @@
     /* Hero */
     .hero {
       min-height: 90vh;
-      background: linear-gradient(107deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%), url('https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+      background: linear-gradient(107deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 100%), url('https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/12254307-chile-4141951.jpg') center/cover no-repeat;
       display: flex;
       align-items: center;
       position: relative;
@@ -810,7 +810,7 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(255,255,255,0.9);
+      background: rgba(255, 255, 255, 0.9);
       border: none;
       width: 44px;
       height: 44px;
@@ -821,24 +821,29 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       transition: all 0.2s;
     }
 
     .gallery-nav-btn:hover {
       background: white;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
       transform: translateY(-50%) scale(1.08);
     }
 
-    .gallery-nav-btn.prev { left: 14px; }
-    .gallery-nav-btn.next { right: 14px; }
+    .gallery-nav-btn.prev {
+      left: 14px;
+    }
+
+    .gallery-nav-btn.next {
+      right: 14px;
+    }
 
     .gallery-counter {
       position: absolute;
       bottom: 14px;
       right: 16px;
-      background: rgba(0,0,0,0.55);
+      background: rgba(0, 0, 0, 0.55);
       color: white;
       font-size: 0.78rem;
       font-weight: 600;
@@ -856,9 +861,18 @@
       scrollbar-color: #D4CFC4 transparent;
     }
 
-    .gallery-thumbs::-webkit-scrollbar { height: 4px; }
-    .gallery-thumbs::-webkit-scrollbar-track { background: transparent; }
-    .gallery-thumbs::-webkit-scrollbar-thumb { background: #D4CFC4; border-radius: 4px; }
+    .gallery-thumbs::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .gallery-thumbs::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .gallery-thumbs::-webkit-scrollbar-thumb {
+      background: #D4CFC4;
+      border-radius: 4px;
+    }
 
     .thumb {
       flex-shrink: 0;
@@ -879,8 +893,15 @@
       display: block;
     }
 
-    .thumb:hover { opacity: 1; border-color: #C7B28B; }
-    .thumb.active { opacity: 1; border-color: #C7B28B; }
+    .thumb:hover {
+      opacity: 1;
+      border-color: #C7B28B;
+    }
+
+    .thumb.active {
+      opacity: 1;
+      border-color: #C7B28B;
+    }
 
     .detail-info-grid {
       display: grid;
@@ -918,7 +939,8 @@
       top: 90px;
     }
 
-    .contact-card input, .contact-card textarea {
+    .contact-card input,
+    .contact-card textarea {
       width: 100%;
       padding: 12px 14px;
       border: 1px solid #E2DCD2;
@@ -931,7 +953,8 @@
       margin-bottom: 10px;
     }
 
-    .contact-card input:focus, .contact-card textarea:focus {
+    .contact-card input:focus,
+    .contact-card textarea:focus {
       border-color: #C7B28B;
     }
 
@@ -944,8 +967,13 @@
     }
 
     @keyframes shimmer {
-      0% { background-position: 200% 0; }
-      100% { background-position: -200% 0; }
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
     }
 
     #detailView .property-grid {
@@ -956,15 +984,25 @@
       .detail-info-grid {
         grid-template-columns: 1fr;
       }
-      .contact-card { position: static; }
+
+      .contact-card {
+        position: static;
+      }
     }
 
     @media (max-width: 640px) {
       #detailView .property-grid {
         grid-template-columns: 1fr;
       }
-      .detail-hero { aspect-ratio: 4/3; }
-      .thumb { width: 64px; height: 48px; }
+
+      .detail-hero {
+        aspect-ratio: 4/3;
+      }
+
+      .thumb {
+        width: 64px;
+        height: 48px;
+      }
     }
   </style>
 </head>
@@ -1314,7 +1352,7 @@
           <div class="gallery-thumbs" id="galleryThumbs">
             ${images.map((src, i) => `
               <div class="thumb ${i === 0 ? 'active' : ''}" data-gi="${i}">
-                <img src="${src}" alt="Foto ${i+1}" loading="lazy">
+                <img src="${src}" alt="Foto ${i + 1}" loading="lazy">
               </div>
             `).join('')}
           </div>
@@ -1363,13 +1401,13 @@
       const fmt = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 });
       const priceText = prop.priceDisplay ? prop.priceDisplay : fmt.format(prop.price);
 
-      const highlightsHtml = prop.highlights && prop.highlights.length > 0 
+      const highlightsHtml = prop.highlights && prop.highlights.length > 0
         ? `<div style="margin: 32px 0;">
              <h3 style="margin-bottom:16px;">Atributos Destacados</h3>
              <ul style="list-style: none; padding: 0;">
                ${prop.highlights.map(h => `<li style="margin-bottom: 8px; color: #3A3A3A;"><i class="fas fa-check" style="color: #C7B28B; margin-right: 8px;"></i>${h}</li>`).join('')}
              </ul>
-           </div>` 
+           </div>`
         : '';
 
       detailDiv.innerHTML = `
