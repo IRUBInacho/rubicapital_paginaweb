@@ -1631,6 +1631,8 @@
       currentFilter.beds = document.getElementById("filterBeds")?.value || "";
       currentFilter.baths = document.getElementById("filterBaths")?.value || "";
       renderAll();
+      const grid = document.getElementById("allPropertiesGrid");
+      if (grid) grid.scrollIntoView({ behavior: "smooth" });
     });
     document.getElementById("scrollToPropertiesBtn")?.addEventListener("click", () => document.getElementById("allPropertiesGrid").scrollIntoView({ behavior: "smooth" }));
     document.getElementById("ownerLeadBtn")?.addEventListener("click", () => window.open("https://wa.me/56912345678?text=Necesito%20asesoría", "_blank"));
