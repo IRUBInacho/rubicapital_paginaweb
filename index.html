@@ -905,10 +905,13 @@
 
     .detail-info-grid {
       display: grid;
-      grid-template-columns: 1fr 320px;
+      grid-template-columns: 1fr;
       gap: 40px;
       margin-top: 32px;
       align-items: start;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .detail-specs {
@@ -1560,21 +1563,6 @@
                 <div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div>
               </div>
             ` : ''}
-          </div>
-
-          <div class="contact-card">
-            <h3 style="margin-bottom:6px;">¿Te interesa esta propiedad?</h3>
-            <p style="font-size:0.85rem; color:#7B6E5A; margin-bottom:20px;">Déjanos tus datos y un asesor experto te contactará hoy mismo.</p>
-            <input id="leadName" placeholder="Tu nombre" type="text">
-            <input id="leadPhone" placeholder="Teléfono o email" type="text">
-            <textarea id="leadMsg" placeholder="Mensaje (opcional)" rows="3" style="resize:vertical;"></textarea>
-            <button id="contactLeadBtn" class="btn-primary" style="width:100%; justify-content:center; margin-bottom:10px;">
-              Agendar Visita Privada
-            </button>
-            <a href="https://wa.me/56998642119?text=Hola,%20me%20interesa%20agendar%20una%20visita%20para%20${encodeURIComponent(prop.title)}" target="_blank"
-              class="btn-outline" style="width:100%; text-align:center; display:flex; justify-content:center; align-items:center; gap:8px; text-decoration:none;">
-              <i class="fab fa-whatsapp" style="color:#25D366;"></i> Contactar a un Asesor
-            </a>
           </div>
         </div>
       `;
