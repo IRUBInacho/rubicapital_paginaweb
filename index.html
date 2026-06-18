@@ -1029,6 +1029,7 @@
                   <option value="Casa">Casa</option>
                   <option value="Departamento">Departamento</option>
                   <option value="Parcela">Parcela</option>
+                  <option value="Terreno">Terreno</option>
                   <option value="Oficina">Oficina</option>
                   <option value="Local Comercial">Local Comercial</option>
                 </select></div>
@@ -1281,7 +1282,15 @@
 
     function filterProperties() { return properties.filter(p => { if (currentFilter.transaction && p.transaction !== currentFilter.transaction) return false; if (currentFilter.city && !p.city.toLowerCase().includes(currentFilter.city.toLowerCase())) return false; if (currentFilter.type && p.type !== currentFilter.type) return false; if (currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false; if (currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false; if (currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false; return true; }); }
 
-    function renderCard(p) { return `<div class="property-card" data-id="${p.id}"><div class="card-img" style="background-image: url('${p.images[0]}');"><span class="status-badge">${p.transaction}</span></div><div class="card-content"><div class="price">${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 }).format(p.price)}</div><div style="font-weight: 600;">${p.title}</div><div class="property-meta"><span>🛏 ${p.beds} hab</span><span>🛁 ${p.baths} baños</span><span>📐 ${p.area} m²</span><span>🚗 ${p.parking}</span></div><div>📍 ${p.city}</div><button class="btn-outline view-property-btn" style="margin-top:12px; width:100%;" data-id="${p.id}">Ver propiedad →</button></div></div>`; }
+    function renderCard(p) {
+      const priceText = p.priceDisplay ? p.priceDisplay : new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 }).format(p.price);
+      const parkingHtml = p.parking > 0 ? `<span>🚗 Estacionamiento</span>` : '';
+      const areaHtml = p.area > 0 ? `<span>📐 ${p.area} m²</span>` : '';
+      const bedsHtml = p.beds > 0 ? `<span>🛏 ${p.beds} dorm</span>` : '';
+      const bathsHtml = p.baths > 0 ? `<span>🛁 ${p.baths} baños</span>` : '';
+
+      return `<div class="property-card" data-id="${p.id}"><div class="card-img" style="background-image: url('${p.images[0]}');"><span class="status-badge">${p.transaction}</span></div><div class="card-content"><div class="price">${priceText}</div><div style="font-weight: 600;">${p.title}</div><div class="property-meta">${bedsHtml}${bathsHtml}${areaHtml}${parkingHtml}</div><div>📍 ${p.city}</div><button class="btn-outline view-property-btn" style="margin-top:12px; width:100%;" data-id="${p.id}">Ver detalles →</button></div></div>`;
+    }
 
     function attachCardEvents() { document.querySelectorAll('.view-property-btn').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.getAttribute('data-id')); showPropertyDetail(id); })); }
 
@@ -1352,6 +1361,16 @@
 
       const similar = properties.filter(p => p.type === prop.type && p.id !== prop.id).slice(0, 3);
       const fmt = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 });
+      const priceText = prop.priceDisplay ? prop.priceDisplay : fmt.format(prop.price);
+
+      const highlightsHtml = prop.highlights && prop.highlights.length > 0 
+        ? `<div style="margin: 32px 0;">
+             <h3 style="margin-bottom:16px;">Atributos Destacados</h3>
+             <ul style="list-style: none; padding: 0;">
+               ${prop.highlights.map(h => `<li style="margin-bottom: 8px; color: #3A3A3A;"><i class="fas fa-check" style="color: #C7B28B; margin-right: 8px;"></i>${h}</li>`).join('')}
+             </ul>
+           </div>` 
+        : '';
 
       detailDiv.innerHTML = `
         <button id="backHomeBtn" class="btn-outline" style="margin-bottom:28px;">
@@ -1362,27 +1381,30 @@
 
         <div class="detail-info-grid">
           <div>
-            <span class="status-badge" style="position:static; display:inline-block; margin-bottom:12px;">${prop.transaction}</span>
+            <span class="status-badge" style="position:static; display:inline-block; margin-bottom:12px;">En ${prop.transaction}</span>
             <h1 style="font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom:8px;">${prop.title}</h1>
-            <div class="price">${fmt.format(prop.price)}</div>
-            <p style="color:#5B5752; margin: 16px 0; font-size:1.05rem; line-height:1.8;">${prop.description || 'Propiedad con excelentes características y ubicación privilegiada.'}</p>
-
+            <div class="price">${priceText}</div>
+            
             <div class="detail-specs">
               ${prop.beds > 0 ? `<div class="spec-chip">🛏 ${prop.beds} dorm.</div>` : ''}
               ${prop.baths > 0 ? `<div class="spec-chip">🛁 ${prop.baths} baños</div>` : ''}
-              <div class="spec-chip">📐 ${prop.area} m²</div>
-              ${prop.parking > 0 ? `<div class="spec-chip">🚗 ${prop.parking} est.</div>` : ''}
+              ${prop.area > 0 ? `<div class="spec-chip">📐 ${prop.area} m²</div>` : ''}
+              ${prop.parking > 0 ? `<div class="spec-chip">🚗 Estacionamiento</div>` : ''}
               <div class="spec-chip">📍 ${prop.city}</div>
             </div>
 
-            <div style="margin-top:24px; padding-top:20px; border-top:1px solid #EBE5DC;">
-              <h3 style="margin-bottom:8px;">Asesor responsable</h3>
+            <p style="color:#5B5752; margin: 24px 0; font-size:1.05rem; line-height:1.8;">${prop.description || 'Propiedad con excelentes características y ubicación privilegiada.'}</p>
+
+            ${highlightsHtml}
+
+            <div style="margin-top:32px; padding-top:24px; border-top:1px solid #EBE5DC;">
+              <h3 style="margin-bottom:8px;">Asesor Responsable</h3>
               <p style="color:#5B5752;"><i class="fas fa-user-tie" style="color:#C7B28B;"></i> ${prop.agent}</p>
             </div>
 
             ${similar.length > 0 ? `
-              <div style="margin-top:36px;">
-                <h3 style="margin-bottom:20px;">Propiedades similares</h3>
+              <div style="margin-top:48px;">
+                <h3 style="margin-bottom:20px;">Propiedades Similares</h3>
                 <div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div>
               </div>
             ` : ''}
@@ -1390,16 +1412,16 @@
 
           <div class="contact-card">
             <h3 style="margin-bottom:6px;">¿Te interesa esta propiedad?</h3>
-            <p style="font-size:0.85rem; color:#7B6E5A; margin-bottom:20px;">Déjanos tu contacto y te respondemos hoy.</p>
+            <p style="font-size:0.85rem; color:#7B6E5A; margin-bottom:20px;">Déjanos tus datos y un asesor experto te contactará hoy mismo.</p>
             <input id="leadName" placeholder="Tu nombre" type="text">
             <input id="leadPhone" placeholder="Teléfono o email" type="text">
             <textarea id="leadMsg" placeholder="Mensaje (opcional)" rows="3" style="resize:vertical;"></textarea>
             <button id="contactLeadBtn" class="btn-primary" style="width:100%; justify-content:center; margin-bottom:10px;">
-              <i class="fas fa-paper-plane"></i> Enviar consulta
+              Agendar Visita Privada
             </button>
-            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20la%20${encodeURIComponent(prop.title)}" target="_blank"
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20agendar%20una%20visita%20para%20${encodeURIComponent(prop.title)}" target="_blank"
               class="btn-outline" style="width:100%; text-align:center; display:flex; justify-content:center; align-items:center; gap:8px; text-decoration:none;">
-              <i class="fab fa-whatsapp" style="color:#25D366;"></i> Contactar por WhatsApp
+              <i class="fab fa-whatsapp" style="color:#25D366;"></i> Contactar a un Asesor
             </a>
           </div>
         </div>
