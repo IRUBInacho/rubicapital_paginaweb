@@ -1060,8 +1060,8 @@
                   <option value="Venta">Venta</option>
                   <option value="Arriendo">Arriendo</option>
                 </select></div>
-              <div class="filter-group"><label>COMUNA</label><input type="text" id="filterCity"
-                  placeholder="Las Condes, Vitacura..."></div>
+              <div class="filter-group"><label>BUSCADOR / COMUNA</label><input type="text" id="filterCity"
+                  placeholder="Ej: Paine, depto, quincho..."></div>
               <div class="filter-group"><label>TIPO</label><select id="filterType">
                   <option value="">Todos</option>
                   <option value="Casa">Casa</option>
@@ -1318,7 +1318,90 @@
 
     let currentFilter = { transaction: '', city: '', type: '', maxPrice: '', beds: '', baths: '' };
 
-    function filterProperties() { return properties.filter(p => { if (currentFilter.transaction && p.transaction !== currentFilter.transaction) return false; if (currentFilter.city && !p.city.toLowerCase().includes(currentFilter.city.toLowerCase())) return false; if (currentFilter.type && p.type !== currentFilter.type) return false; if (currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false; if (currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false; if (currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false; return true; }); }
+    function normalizeText(text) {
+      if (!text) return '';
+      return text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
+        .toLowerCase()
+        .trim();
+    }
+
+    function filterProperties() {
+      return properties.filter(p => {
+        // 1. Filtro de transacción (Venta/Arriendo)
+        if (currentFilter.transaction && p.transaction !== currentFilter.transaction) return false;
+        
+        // 2. Filtro de tipo (Casa/Departamento/etc.)
+        if (currentFilter.type && p.type !== currentFilter.type) return false;
+        
+        // 3. Filtro de precio máximo
+        if (currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false;
+        
+        // 4. Filtro de dormitorios (mínimo)
+        if (currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false;
+        
+        // 5. Filtro de baños (mínimo)
+        if (currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false;
+        
+        // 6. Buscador General Inteligente
+        if (currentFilter.city) {
+          const rawQuery = currentFilter.city.toLowerCase();
+          
+          // Mapeo de sinónimos comunes
+          const synonymMap = {
+            'depto': 'departamento',
+            'deptos': 'departamento',
+            'departamentos': 'departamento',
+            'estacionamiento': 'estacionamiento',
+            'estacionamientos': 'estacionamiento',
+            'dormitorio': 'dorm',
+            'dormitorios': 'dorm',
+            'habitacion': 'dorm',
+            'habitaciones': 'dorm',
+            'pieza': 'dorm',
+            'piezas': 'dorm',
+            'baño': 'baños',
+            'baños': 'baños'
+          };
+          
+          // Tokenizar y normalizar términos
+          const tokens = rawQuery.split(/\s+/).filter(t => t.length > 0).map(t => {
+            const norm = normalizeText(t);
+            return synonymMap[norm] || norm;
+          });
+          
+          if (tokens.length > 0) {
+            // Construir texto de especificaciones técnicas
+            const specsText = [
+              p.beds > 0 ? `${p.beds} dorm` : '',
+              p.baths > 0 ? `${p.baths} baños` : '',
+              p.parking > 0 ? 'estacionamiento' : ''
+            ].join(' ');
+
+            // Normalizar todos los textos descriptivos e indexables de la propiedad
+            const cleanDescription = normalizeText((p.description || '').replace(/<[^>]*>/g, ' '));
+            const highlightsText = normalizeText((p.highlights || []).join(' '));
+            
+            const searchBlob = [
+              normalizeText(p.title),
+              normalizeText(p.city),
+              normalizeText(p.type),
+              normalizeText(p.agent),
+              normalizeText(specsText),
+              cleanDescription,
+              highlightsText
+            ].join(' ');
+            
+            // La propiedad debe cumplir con TODOS los tokens buscados (AND)
+            const matchesAll = tokens.every(token => searchBlob.includes(token));
+            if (!matchesAll) return false;
+          }
+        }
+        
+        return true;
+      });
+    }
 
     function renderCard(p) {
       const priceText = p.priceDisplay ? p.priceDisplay : new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 }).format(p.price);
@@ -1480,7 +1563,37 @@
       const featured = properties.filter(p => p.featured).slice(0, 6);
       const filteredAll = filterProperties();
       document.getElementById("featuredGrid").innerHTML = featured.map(renderCard).join('');
-      document.getElementById("allPropertiesGrid").innerHTML = filteredAll.map(renderCard).join('');
+      
+      if (filteredAll.length === 0) {
+        document.getElementById("allPropertiesGrid").innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: #FAF9F6; border: 1px dashed #E2DCD2; border-radius: 8px; max-width: 600px; margin: 30px auto;">
+            <div style="font-size: 3rem; margin-bottom: 20px; color: #C7B28B;"><i class="far fa-folder-open"></i></div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 12px; font-family: var(--font-title); color: #1E1E1E;">No encontramos propiedades coincidentes</h3>
+            <p style="color: #6C6B66; font-size: 0.95rem; line-height: 1.6; margin-bottom: 24px; max-width: 480px; margin-left: auto; margin-right: auto;">
+              Nuestro catálogo se actualiza constantemente. Prueba limpiando tus filtros o contáctanos directamente para ayudarte a encontrar la propiedad que buscas.
+            </p>
+            <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+              <button id="clearFiltersBtn" class="btn-primary" style="padding: 10px 20px; font-size: 0.9rem; border-radius: 4px; cursor: pointer;">Limpiar Filtros</button>
+              <a href="https://wa.me/56912345678?text=Hola,%20busco%20una%20propiedad%20y%20no%20la%20encontré%20en%20el%20sitio." target="_blank" class="btn-outline" style="padding: 10px 20px; font-size: 0.9rem; border-radius: 4px; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+                <i class="fab fa-whatsapp" style="color: #25D366;"></i> Contactar un Asesor
+              </a>
+            </div>
+          </div>
+        `;
+        document.getElementById("clearFiltersBtn")?.addEventListener("click", () => {
+          document.getElementById("globalTransaction").value = "";
+          document.getElementById("filterCity").value = "";
+          document.getElementById("filterType").value = "";
+          document.getElementById("filterMaxPrice").value = "";
+          document.getElementById("filterBeds").value = "";
+          
+          currentFilter = { transaction: '', city: '', type: '', maxPrice: '', beds: '', baths: '' };
+          renderAll();
+        });
+      } else {
+        document.getElementById("allPropertiesGrid").innerHTML = filteredAll.map(renderCard).join('');
+      }
+
       document.getElementById("resultCount").innerText = `${filteredAll.length} propiedades encontradas`;
       attachCardEvents();
     }
