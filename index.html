@@ -787,27 +787,184 @@
       }
     }
 
-    /* Ajustes adicionales para el detalle */
-    .detail-gallery {
-      display: flex;
-      gap: 16px;
-      overflow-x: auto;
-      padding-bottom: 16px;
+    /* ========== GALLERY & DETAIL VIEW ========== */
+    .detail-hero {
+      position: relative;
+      width: 100%;
+      border-radius: 28px;
+      overflow: hidden;
+      background: #111;
+      aspect-ratio: 16/9;
+      max-height: 560px;
     }
 
-    #detailView img {
+    .detail-hero img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.35s ease;
+    }
+
+    .gallery-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.9);
+      border: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: all 0.2s;
+    }
+
+    .gallery-nav-btn:hover {
+      background: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+      transform: translateY(-50%) scale(1.08);
+    }
+
+    .gallery-nav-btn.prev { left: 14px; }
+    .gallery-nav-btn.next { right: 14px; }
+
+    .gallery-counter {
+      position: absolute;
+      bottom: 14px;
+      right: 16px;
+      background: rgba(0,0,0,0.55);
+      color: white;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+    }
+
+    .gallery-thumbs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0 4px;
+      scrollbar-width: thin;
+      scrollbar-color: #D4CFC4 transparent;
+    }
+
+    .gallery-thumbs::-webkit-scrollbar { height: 4px; }
+    .gallery-thumbs::-webkit-scrollbar-track { background: transparent; }
+    .gallery-thumbs::-webkit-scrollbar-thumb { background: #D4CFC4; border-radius: 4px; }
+
+    .thumb {
+      flex-shrink: 0;
+      width: 80px;
+      height: 60px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: all 0.2s;
+      opacity: 0.65;
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .thumb:hover { opacity: 1; border-color: #C7B28B; }
+    .thumb.active { opacity: 1; border-color: #C7B28B; }
+
+    .detail-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 40px;
+      margin-top: 32px;
+      align-items: start;
+    }
+
+    .detail-specs {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+
+    .spec-chip {
+      background: #F4F2EF;
+      padding: 10px 18px;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #3A3A3A;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact-card {
+      background: #FDFBF9;
+      border: 1px solid #EBE5DC;
       border-radius: 24px;
+      padding: 28px;
+      position: sticky;
+      top: 90px;
+    }
+
+    .contact-card input, .contact-card textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #E2DCD2;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      background: white;
+      outline: none;
+      transition: border-color 0.2s;
+      margin-bottom: 10px;
+    }
+
+    .contact-card input:focus, .contact-card textarea:focus {
+      border-color: #C7B28B;
+    }
+
+    .skeleton-card {
+      background: linear-gradient(90deg, #f0ede8 25%, #e8e4df 50%, #f0ede8 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 20px;
+      height: 380px;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
     }
 
     #detailView .property-grid {
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
 
+    @media (max-width: 900px) {
+      .detail-info-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-card { position: static; }
+    }
+
     @media (max-width: 640px) {
       #detailView .property-grid {
         grid-template-columns: 1fr;
       }
+      .detail-hero { aspect-ratio: 4/3; }
+      .thumb { width: 64px; height: 48px; }
     }
   </style>
 </head>
@@ -1098,37 +1255,29 @@
   <script>
     // ---------- DATA ----------
     let properties = [];
+    let isAgentLogged = false;
 
-    function seedProperties() {
-      return [
-        { id: 1, title: "Casa en Chicureo", transaction: "Venta", price: 450000000, beds: 4, baths: 3, area: 220, parking: 2, type: "Casa", city: "Chicureo", address: "Av. Chicureo 456", images: ["https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"], featured: true, agent: "Isidora R." },
-        { id: 2, title: "Depto Las Condes", transaction: "Arriendo", price: 1200000, beds: 2, baths: 2, area: 85, parking: 1, type: "Departamento", city: "Las Condes", address: "Alonso de Córdova", featured: true, agent: "Felipe M." },
-        { id: 3, title: "Parcela Pucón", transaction: "Venta", price: 89000000, beds: 3, baths: 2, area: 5000, parking: 4, type: "Parcela", city: "Pucón", featured: true },
-        { id: 4, title: "Oficina Providencia", transaction: "Venta", price: 185000000, beds: 0, baths: 2, area: 120, parking: 2, type: "Oficina", city: "Providencia", featured: false },
-        { id: 5, title: "Local Comercial Viña", transaction: "Arriendo", price: 2500000, beds: 0, baths: 1, area: 90, parking: 1, type: "Local Comercial", city: "Viña del Mar", featured: true },
-        { id: 6, title: "Casa Vitacura", transaction: "Venta", price: 620000000, beds: 5, baths: 4, area: 340, parking: 3, type: "Casa", city: "Vitacura", featured: true },
-        { id: 7, title: "Depto Lo Barnechea", transaction: "Arriendo", price: 950000, beds: 3, baths: 2, area: 110, parking: 1, type: "Departamento", city: "Lo Barnechea", featured: false },
-        { id: 8, title: "Casa Concón", transaction: "Venta", price: 320000000, beds: 3, baths: 2, area: 170, parking: 2, type: "Casa", city: "Concón", featured: false },
-        { id: 9, title: "Departamento Santiago Centro", transaction: "Venta", price: 135000000, beds: 2, baths: 1, area: 65, parking: 0, type: "Departamento", city: "Santiago", featured: false },
-        { id: 10, title: "Oficina El Golf", transaction: "Arriendo", price: 1800000, beds: 0, baths: 2, area: 95, parking: 2, type: "Oficina", city: "Las Condes", featured: false },
-        { id: 11, title: "Parcela familiar", transaction: "Venta", price: 129000000, beds: 3, baths: 2, area: 8000, parking: 3, type: "Parcela", city: "Pucón", featured: false },
-        { id: 12, title: "Local Gastronómico", transaction: "Arriendo", price: 2100000, beds: 0, baths: 2, area: 130, parking: 2, type: "Local Comercial", city: "Providencia", featured: false },
-        { id: 13, title: "Casa Chicureo Arriendo", transaction: "Arriendo", price: 2800000, beds: 4, baths: 3, area: 200, parking: 2, type: "Casa", city: "Chicureo", featured: false },
-        { id: 14, title: "Depto Viña del Mar", transaction: "Venta", price: 199000000, beds: 3, baths: 2, area: 100, parking: 1, type: "Departamento", city: "Viña del Mar", featured: false },
-        { id: 15, title: "Terreno Pucón", transaction: "Venta", price: 45000000, beds: 0, baths: 0, area: 2000, parking: 0, type: "Parcela", city: "Pucón", featured: false },
-        { id: 16, title: "Oficina premium Vitacura", transaction: "Venta", price: 275000000, beds: 0, baths: 3, area: 180, parking: 3, type: "Oficina", city: "Vitacura", featured: false },
-        { id: 17, title: "Casa Las Condes", transaction: "Arriendo", price: 3200000, beds: 4, baths: 3, area: 230, parking: 2, type: "Casa", city: "Las Condes", featured: false },
-        { id: 18, title: "Departamento Lo Barnechea VT", transaction: "Venta", price: 290000000, beds: 3, baths: 2, area: 120, parking: 2, type: "Departamento", city: "Lo Barnechea", featured: false },
-        { id: 19, title: "Casa Santiago centro", transaction: "Venta", price: 170000000, beds: 3, baths: 1, area: 150, parking: 1, type: "Casa", city: "Santiago", featured: false },
-        { id: 20, title: "Local comercial Vitacura", transaction: "Arriendo", price: 3000000, beds: 0, baths: 1, area: 75, parking: 1, type: "Local Comercial", city: "Vitacura", featured: false }
-      ].map(p => { if (!p.images) p.images = ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"]; if (!p.agent) p.agent = "Rubí Kapital Asesor"; return p; });
+    // Carga propiedades desde properties.json (Supabase URLs)
+    async function loadProperties() {
+      // Si el agente tiene datos editados en localStorage, usarlos
+      const stored = localStorage.getItem('rubikapital_properties_v2');
+      if (stored) {
+        properties = JSON.parse(stored);
+        return;
+      }
+      try {
+        const res = await fetch('properties.json');
+        if (!res.ok) throw new Error('No se pudo cargar properties.json');
+        properties = await res.json();
+      } catch (e) {
+        console.warn('Error cargando properties.json:', e);
+        properties = [];
+      }
     }
 
-    function loadProperties() { const stored = localStorage.getItem("rubikapital_properties"); if (stored) properties = JSON.parse(stored); else properties = seedProperties(); }
-    function saveProperties() { localStorage.setItem("rubikapital_properties", JSON.stringify(properties)); }
+    function saveProperties() { localStorage.setItem('rubikapital_properties_v2', JSON.stringify(properties)); }
 
-    let currentFilter = { transaction: "", city: "", type: "", maxPrice: "", beds: "", baths: "" };
-    let isAgentLogged = false;
+    let currentFilter = { transaction: '', city: '', type: '', maxPrice: '', beds: '', baths: '' };
 
     function filterProperties() { return properties.filter(p => { if (currentFilter.transaction && p.transaction !== currentFilter.transaction) return false; if (currentFilter.city && !p.city.toLowerCase().includes(currentFilter.city.toLowerCase())) return false; if (currentFilter.type && p.type !== currentFilter.type) return false; if (currentFilter.maxPrice && Number(p.price) > Number(currentFilter.maxPrice)) return false; if (currentFilter.beds && p.beds < parseInt(currentFilter.beds)) return false; if (currentFilter.baths && p.baths < parseInt(currentFilter.baths)) return false; return true; }); }
 
@@ -1136,18 +1285,135 @@
 
     function attachCardEvents() { document.querySelectorAll('.view-property-btn').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.getAttribute('data-id')); showPropertyDetail(id); })); }
 
+    // ---------- GALLERY STATE ----------
+    let galleryIndex = 0;
+    let galleryImages = [];
+
+    function renderGallery(images) {
+      galleryImages = images;
+      galleryIndex = 0;
+      return `
+        <div class="detail-hero" id="detailHero">
+          <img id="galleryMainImg" src="${images[0]}" alt="Foto propiedad" loading="eager">
+          ${images.length > 1 ? `
+            <button class="gallery-nav-btn prev" id="galleryPrev"><i class="fas fa-chevron-left"></i></button>
+            <button class="gallery-nav-btn next" id="galleryNext"><i class="fas fa-chevron-right"></i></button>
+          ` : ''}
+          <div class="gallery-counter" id="galleryCounter">1 / ${images.length}</div>
+        </div>
+        ${images.length > 1 ? `
+          <div class="gallery-thumbs" id="galleryThumbs">
+            ${images.map((src, i) => `
+              <div class="thumb ${i === 0 ? 'active' : ''}" data-gi="${i}">
+                <img src="${src}" alt="Foto ${i+1}" loading="lazy">
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      `;
+    }
+
+    function attachGalleryEvents() {
+      function goTo(idx) {
+        galleryIndex = (idx + galleryImages.length) % galleryImages.length;
+        const mainImg = document.getElementById('galleryMainImg');
+        mainImg.style.opacity = '0';
+        setTimeout(() => {
+          mainImg.src = galleryImages[galleryIndex];
+          mainImg.style.opacity = '1';
+        }, 180);
+        document.getElementById('galleryCounter').textContent = `${galleryIndex + 1} / ${galleryImages.length}`;
+        document.querySelectorAll('.thumb').forEach((el, i) => el.classList.toggle('active', i === galleryIndex));
+        const activeThumb = document.querySelector(`.thumb[data-gi="${galleryIndex}"]`);
+        if (activeThumb) activeThumb.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      }
+      document.getElementById('galleryPrev')?.addEventListener('click', () => goTo(galleryIndex - 1));
+      document.getElementById('galleryNext')?.addEventListener('click', () => goTo(galleryIndex + 1));
+      document.querySelectorAll('.thumb').forEach(el => {
+        el.addEventListener('click', () => goTo(parseInt(el.dataset.gi)));
+      });
+      // Keyboard navigation
+      document.onkeydown = (e) => {
+        if (document.getElementById('detailView').style.display !== 'none') {
+          if (e.key === 'ArrowRight') goTo(galleryIndex + 1);
+          if (e.key === 'ArrowLeft') goTo(galleryIndex - 1);
+        }
+      };
+    }
+
     function showPropertyDetail(id) {
       const prop = properties.find(p => p.id === id);
       if (!prop) return;
-      document.getElementById("homeView").style.display = "none";
-      document.getElementById("adminView").style.display = "none";
-      const detailDiv = document.getElementById("detailView");
-      detailDiv.style.display = "block";
+      document.getElementById('homeView').style.display = 'none';
+      document.getElementById('adminView').style.display = 'none';
+      const detailDiv = document.getElementById('detailView');
+      detailDiv.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
       const similar = properties.filter(p => p.type === prop.type && p.id !== prop.id).slice(0, 3);
-      detailDiv.innerHTML = `<button id="backHomeBtn" class="btn-outline" style="margin-bottom:24px;"><i class="fas fa-arrow-left"></i> Volver</button><div><img src="${prop.images[0]}" style="width:100%; border-radius: 32px;"><h1>${prop.title}</h1><p class="price">${new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(prop.price)}</p><p>${prop.description || "Ubicación privilegiada, acabados de lujo y vistas exclusivas."}</p><div style="display:flex; gap:20px; flex-wrap:wrap;"><span>🛏 ${prop.beds}</span><span>🛁 ${prop.baths}</span><span>📐 ${prop.area} m²</span></div><div><iframe width="100%" height="250" style="border:0; border-radius:24px;" loading="lazy" src="https://maps.google.com/?q=${encodeURIComponent(prop.address + ", " + prop.city)}&output=embed"></iframe></div><div style="background:#F9F8F5; padding:20px;"><h3>Contactar asesor</h3><input id="leadName" placeholder="Nombre" style="width:100%; margin-bottom:8px;"><br><button id="contactLeadBtn" class="btn-primary" style="margin-top:10px;">Enviar</button><a href="https://wa.me/56912345678?text=Hola%20me%20interesa%20${encodeURIComponent(prop.title)}" target="_blank" class="btn-outline" style="margin-left:8px;">WhatsApp</a></div><div><h3>Asesor: ${prop.agent}</h3></div><div><h3>Similares</h3><div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div></div></div>`;
-      document.getElementById("backHomeBtn")?.addEventListener("click", () => { document.getElementById("detailView").style.display = "none"; document.getElementById("homeView").style.display = "block"; renderAll(); });
+      const fmt = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 });
+
+      detailDiv.innerHTML = `
+        <button id="backHomeBtn" class="btn-outline" style="margin-bottom:28px;">
+          <i class="fas fa-arrow-left"></i> Volver al catálogo
+        </button>
+
+        ${renderGallery(prop.images)}
+
+        <div class="detail-info-grid">
+          <div>
+            <span class="status-badge" style="position:static; display:inline-block; margin-bottom:12px;">${prop.transaction}</span>
+            <h1 style="font-size: clamp(1.8rem, 3vw, 2.8rem); margin-bottom:8px;">${prop.title}</h1>
+            <div class="price">${fmt.format(prop.price)}</div>
+            <p style="color:#5B5752; margin: 16px 0; font-size:1.05rem; line-height:1.8;">${prop.description || 'Propiedad con excelentes características y ubicación privilegiada.'}</p>
+
+            <div class="detail-specs">
+              ${prop.beds > 0 ? `<div class="spec-chip">🛏 ${prop.beds} dorm.</div>` : ''}
+              ${prop.baths > 0 ? `<div class="spec-chip">🛁 ${prop.baths} baños</div>` : ''}
+              <div class="spec-chip">📐 ${prop.area} m²</div>
+              ${prop.parking > 0 ? `<div class="spec-chip">🚗 ${prop.parking} est.</div>` : ''}
+              <div class="spec-chip">📍 ${prop.city}</div>
+            </div>
+
+            <div style="margin-top:24px; padding-top:20px; border-top:1px solid #EBE5DC;">
+              <h3 style="margin-bottom:8px;">Asesor responsable</h3>
+              <p style="color:#5B5752;"><i class="fas fa-user-tie" style="color:#C7B28B;"></i> ${prop.agent}</p>
+            </div>
+
+            ${similar.length > 0 ? `
+              <div style="margin-top:36px;">
+                <h3 style="margin-bottom:20px;">Propiedades similares</h3>
+                <div class="property-grid">${similar.map(s => renderCard(s)).join('')}</div>
+              </div>
+            ` : ''}
+          </div>
+
+          <div class="contact-card">
+            <h3 style="margin-bottom:6px;">¿Te interesa esta propiedad?</h3>
+            <p style="font-size:0.85rem; color:#7B6E5A; margin-bottom:20px;">Déjanos tu contacto y te respondemos hoy.</p>
+            <input id="leadName" placeholder="Tu nombre" type="text">
+            <input id="leadPhone" placeholder="Teléfono o email" type="text">
+            <textarea id="leadMsg" placeholder="Mensaje (opcional)" rows="3" style="resize:vertical;"></textarea>
+            <button id="contactLeadBtn" class="btn-primary" style="width:100%; justify-content:center; margin-bottom:10px;">
+              <i class="fas fa-paper-plane"></i> Enviar consulta
+            </button>
+            <a href="https://wa.me/56912345678?text=Hola,%20me%20interesa%20la%20${encodeURIComponent(prop.title)}" target="_blank"
+              class="btn-outline" style="width:100%; text-align:center; display:flex; justify-content:center; align-items:center; gap:8px; text-decoration:none;">
+              <i class="fab fa-whatsapp" style="color:#25D366;"></i> Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      `;
+
+      attachGalleryEvents();
+      document.getElementById('backHomeBtn')?.addEventListener('click', () => {
+        document.getElementById('detailView').style.display = 'none';
+        document.getElementById('homeView').style.display = 'block';
+        document.onkeydown = null;
+        renderAll();
+      });
       attachCardEvents();
-      document.getElementById("contactLeadBtn")?.addEventListener("click", () => alert("✅ Lead registrado. Te contactaremos pronto."));
+      document.getElementById('contactLeadBtn')?.addEventListener('click', () => alert('✅ Mensaje recibido. Te contactaremos a la brevedad.'));
     }
 
     function renderFeaturedAndAll() {
@@ -1218,7 +1484,21 @@
       });
     }
 
-    loadProperties(); initSession(); renderAll(); attachRegionFilters();
+    // Mostrar skeletons mientras carga
+    function showSkeletons() {
+      const skel = Array(6).fill('<div class="skeleton-card"></div>').join('');
+      const featGrid = document.getElementById('featuredGrid');
+      const allGrid = document.getElementById('allPropertiesGrid');
+      if (featGrid) featGrid.innerHTML = skel;
+      if (allGrid) allGrid.innerHTML = skel;
+    }
+
+    showSkeletons();
+    loadProperties().then(() => {
+      initSession();
+      renderAll();
+      attachRegionFilters();
+    });
   </script>
 </body>
 
