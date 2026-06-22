@@ -397,5 +397,86 @@
       "Diseño colonial de un piso",
       "Estacionamiento privado"
     ]
+  },
+  {
+    "id": 12,
+    "title": "Casa Aislada de Un Piso en Buin",
+    "transaction": "Arriendo",
+    "price": 890000,
+    "beds": 3,
+    "baths": 3,
+    "area": 140,
+    "parking": 3,
+    "type": "Casa",
+    "city": "Buin",
+    "address": "Santiago, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Excelente casa aislada de un piso en arriendo, con inmejorable ubicación en Buin.<br><br>Cuenta con 3 dormitorios, 3 baños (dos de ellos en suite), un amplio living comedor, cómoda sala de estar y una cocina totalmente remodelada. Adicionalmente, la propiedad dispone de una casa interior.<br><br>Posee 140 m² construidos (sin incluir la casa interior) sobre un terreno de 400 m² y estacionamiento con capacidad para tres vehículos.",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/1.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/2.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/3.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/4.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/5.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/6.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/7.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/8.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/9.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/10.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/11.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/12.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/13.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/14.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/15.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/16.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/17.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/18.jpeg"
+    ],
+    "priceDisplay": "UF 23,70",
+    "highlights": [
+      "Cocina totalmente remodelada",
+      "Dos dormitorios en suite",
+      "Casa interior adicional",
+      "Estacionamiento para 3 vehículos"
+    ]
+  },
+  {
+    "id": 13,
+    "title": "Amplia Propiedad Comercial en Paine",
+    "transaction": "Arriendo",
+    "price": 2300000,
+    "beds": 4,
+    "baths": 4,
+    "area": 150,
+    "parking": 10,
+    "type": "Comercial",
+    "city": "Paine",
+    "address": "Santiago, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Propiedad comercial aislada de un piso en arriendo, ideal para centro médico, oficinas o instituciones, ubicada estratégicamente frente a SAPU Paine.<br><br>Ofrece 150 m² construidos sobre un gran terreno de 950 m². Cuenta con 4 amplias oficinas (o habitaciones), 4 baños y una amplia y moderna cocina amoblada y equipada con termo eléctrico de alta capacidad, garantizando uso simultáneo de baños y cocina sin problemas.<br><br>Destaca su extensa zona de estacionamiento con capacidad para aproximadamente 10 vehículos.",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/1.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/2.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/3.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/4.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/5.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/6.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/7.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/8.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/9.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/10.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/11.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/12.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/13.jpeg"
+    ],
+    "priceDisplay": "UF 61,29",
+    "highlights": [
+      "Ubicación estratégica frente a SAPU Paine",
+      "4 amplias oficinas y 4 baños",
+      "Termo eléctrico de alta capacidad",
+      "Capacidad para 10 estacionamientos"
+    ]
   }
 ]
