@@ -62,7 +62,7 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa2/9.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa2/10.jpeg"
     ],
-    "priceDisplay": "UF 3.000 / .000.000",
+    "priceDisplay": "UF 3.000",
     "highlights": [
       "Excelente estado de conservación",
       "Construcción aislada (mayor privacidad)",
@@ -379,13 +379,13 @@
     "beds": 4,
     "baths": 3,
     "area": 110,
-    "parking": 1,
+    "parking": 3,
     "type": "Casa",
     "city": "Santiago",
     "address": "Santiago, Chile",
     "featured": false,
     "agent": "Aníbal Rubí",
-    "description": "Magnífica propiedad de estilo colonial en exclusivo condominio con acceso controlado, emplazada en un generoso terreno de 700 m².<br><br>Sus 110 m² construidos ofrecen cuatro amplios dormitorios con closets, gran living comedor, amplia cocina y un espectacular patio coronado por una piscina privada.<br><br>Diseñada para familias que buscan máxima seguridad, amplios espacios exteriores y un nivel de vida superior.",
+    "description": "Magnífica propiedad de estilo colonial en excelente ubicación al interior de un exclusivo condominio con acceso controlado, emplazada en un generoso terreno de 700 m².<br><br>Sus 110 m² construidos ofrecen cuatro amplios dormitorios con closets, tres baños (uno en suite), gran living comedor, amplia cocina y un espectacular patio coronado por una piscina privada.<br><br>Diseñada para familias que buscan máxima seguridad, amplios espacios exteriores y un nivel de vida superior con capacidad para 3 vehículos.",
     "images": [
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/1.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/2.jpeg",
@@ -403,7 +403,7 @@
       "Gran terreno de 700 m² con piscina",
       "Condominio con acceso controlado",
       "Diseño colonial de un piso",
-      "Estacionamiento privado"
+      "Estacionamiento para 3 vehículos"
     ]
   },
   {
