@@ -326,50 +326,6 @@
       border: 1px solid #EDE7DF;
     }
 
-    /* ========== TABS DE SERVICIOS ========== */
-    .services-tabs {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 32px;
-      flex-wrap: wrap;
-    }
-
-    .tab-btn {
-      background: transparent;
-      border: 1px solid #EBE5DC;
-      padding: 12px 24px;
-      border-radius: 30px;
-      font-size: 1rem;
-      font-weight: 500;
-      color: #5B5752;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .tab-btn:hover {
-      border-color: #C7B28B;
-      color: #C7B28B;
-    }
-
-    .tab-btn.active {
-      background: #C7B28B;
-      border-color: #C7B28B;
-      color: white;
-    }
-
-    .tab-content {
-      display: none;
-      background: #FAF9F6;
-      border: 1px solid #EBE5DC;
-      border-radius: 16px;
-      padding: 40px;
-      animation: fadeIn 0.4s ease;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
 
     .elegant-list {
       list-style: none;
@@ -1330,76 +1286,49 @@
         <div class="container">
           <div class="editorial-eyebrow" style="display: block; text-align: center;">Servicios</div>
           <h2 class="section-title" style="text-align: center;">Soluciones Integrales</h2>
-          <div class="solutions-grid">
-            <div class="solution-card">
-              <div class="solution-icon"><i class="fas fa-shield-alt"></i></div>
-              <h3><strong>Corretaje y Blindaje Jurídico Inmobiliario</strong></h3>
-              <p>Compra, venta y arriendo sin riesgos. Realizamos estudios de títulos, posesiones efectivas y
-                tramitación de créditos para asegurar transacciones impecables.</p>
-            </div>
-            <div class="solution-card">
-              <div class="solution-icon"><i class="fas fa-drafting-compass"></i></div>
-              <h3><strong>Gestión de Proyectos de Arquitectura</strong></h3>
-              <p>Viabilizamos tu proyecto con total respaldo. Desde especificaciones técnicas y planos de
-                especialidades, hasta la anhelada recepción municipal.</p>
-            </div>
-            <div class="solution-card">
-              <div class="solution-icon"><i class="fas fa-hard-hat"></i></div>
-              <h3><strong>Control y Contratos de Construcción</strong></h3>
-              <p>Se acabaron los retrasos. Estructuramos contratos con cronogramas estrictos, materiales garantizados y
-                multas por incumplimiento para proteger tu inversión.</p>
-            </div>
-          </div>
-
-          <!-- DETALLE DE SERVICIOS (TABS) -->
-          <div style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
-            <div style="text-align: center; margin-bottom: 40px;">
-              <p style="font-size: 1.1rem; color: #5B5752; line-height: 1.8; font-style: italic;">
-                "He constatado, en mi interacción con clientes, la necesidad de certeza y seguridad en el cumplimiento total y oportuno de los procesos de construcción dados los constantes incumplimientos que se dan en esta materia. Ante esta realidad, me complace ofrecer las siguientes asesorías:"
-              </p>
-            </div>
-            
-            <div class="services-tabs">
-              <button class="tab-btn active" data-target="tab-inmobiliaria">Asesoría Inmobiliaria</button>
-              <button class="tab-btn" data-target="tab-arquitectura">Arquitectura</button>
-              <button class="tab-btn" data-target="tab-construccion">Construcción</button>
-            </div>
-
-            <div class="tab-content active" id="tab-inmobiliaria">
+          <div class="solutions-grid" style="align-items: start;">
+            <!-- Inmobiliaria -->
+            <div class="solution-card" style="text-align: left; padding: 40px 32px;">
+              <div class="solution-icon" style="margin-bottom: 24px; text-align: center;"><i class="fas fa-shield-alt"></i></div>
+              <h3 style="text-align: center; margin-bottom: 24px; font-family: var(--font-title); font-size: 1.4rem;"><strong>Asesoría Inmobiliaria y Legal</strong></h3>
               <ul class="elegant-list">
-                <li>Gestión inmobiliaria (corretaje de propiedades) de compraventa y arrendamiento de bienes inmuebles.</li>
-                <li>Estudio de títulos inmobiliarios (historia legal de bienes inmuebles).</li>
+                <li>Gestión inmobiliaria (compraventa y arrendamiento).</li>
+                <li>Estudio de títulos inmobiliarios.</li>
                 <li>Gestión de créditos hipotecarios.</li>
-                <li>Confección de Contratos de Promesa de Compraventa y Contratos de Compraventa.</li>
-                <li>Subdivisión y regularización de bienes inmuebles.</li>
-                <li>Confección de Escrituras de Adjudicación de bienes inmuebles.</li>
-                <li>Gestión de Posesiones Efectivas de bienes inmuebles.</li>
+                <li>Contratos de Promesa y de Compraventa.</li>
+                <li>Subdivisión y regularización de inmuebles.</li>
+                <li>Escrituras de Adjudicación.</li>
+                <li>Gestión de Posesiones Efectivas.</li>
               </ul>
             </div>
 
-            <div class="tab-content" id="tab-arquitectura">
-              <h4 style="margin-bottom: 16px; color: #1E1E1E; font-family: var(--font-title); font-size: 1.2rem;">Contratos de prestación de servicios de arquitectura</h4>
-              <p style="margin-bottom: 16px; color: #5B5752;">Especificación de los servicios contratados, tales como:</p>
+            <!-- Arquitectura -->
+            <div class="solution-card" style="text-align: left; padding: 40px 32px;">
+              <div class="solution-icon" style="margin-bottom: 24px; text-align: center;"><i class="fas fa-drafting-compass"></i></div>
+              <h3 style="text-align: center; margin-bottom: 24px; font-family: var(--font-title); font-size: 1.4rem;"><strong>Proyectos de Arquitectura</strong></h3>
+              <p style="font-size: 0.95rem; color: #5B5752; margin-bottom: 16px; font-weight: 500;">Contratos de prestación de servicios que incluyen:</p>
               <ul class="elegant-list">
                 <li>Generación de especificaciones técnicas y planos de arquitectura.</li>
-                <li>Gestión de planos de especialidades (agua potable, alcantarillado, pozos, energía eléctrica, gas).</li>
-                <li>Obtención de recepción final municipal de obra.</li>
-                <li>Determinación de cronograma de prestación de servicios y responsabilidad legal de cada parte.</li>
-                <li>Especificación de reuniones periódicas con el propietario.</li>
-                <li>Fijación de precio, forma de pago y multas ante incumplimientos.</li>
+                <li>Planos de especialidades (agua, alcantarillado, pozos, electricidad, gas).</li>
+                <li>Obtención de recepción final municipal.</li>
+                <li>Cronograma y responsabilidad legal de las partes.</li>
+                <li>Reuniones periódicas con propietario.</li>
+                <li>Fijación de precio, pagos y multas por incumplimiento.</li>
               </ul>
             </div>
 
-            <div class="tab-content" id="tab-construccion">
-              <h4 style="margin-bottom: 16px; color: #1E1E1E; font-family: var(--font-title); font-size: 1.2rem;">Contratos de prestación de servicios de construcción</h4>
-              <p style="margin-bottom: 16px; color: #5B5752;">Especificación de los servicios contratados, tales como:</p>
+            <!-- Construcción -->
+            <div class="solution-card" style="text-align: left; padding: 40px 32px;">
+              <div class="solution-icon" style="margin-bottom: 24px; text-align: center;"><i class="fas fa-hard-hat"></i></div>
+              <h3 style="text-align: center; margin-bottom: 24px; font-family: var(--font-title); font-size: 1.4rem;"><strong>Proyectos de Construcción</strong></h3>
+              <p style="font-size: 0.95rem; color: #5B5752; margin-bottom: 16px; font-weight: 500;">Contratos de prestación de servicios que aseguran:</p>
               <ul class="elegant-list">
-                <li>Construcción en base a especificaciones técnicas y planos entregados por arquitecto (que se entienden parte integrante del contrato).</li>
-                <li>Determinación estricta de materiales de construcción a utilizar.</li>
-                <li>Determinación del cronograma de ejecución y responsabilidades legales.</li>
-                <li>Asignación de instaladores autorizados (sanitario, eléctrico y de gas).</li>
-                <li>Especificación de reuniones tripartitas (constructor-propietario-arquitecto) y con especialistas.</li>
-                <li>Fijación de precio, forma de pago y multas ante incumplimientos.</li>
+                <li>Construcción basada en especificaciones técnicas y planos.</li>
+                <li>Determinación estricta de materiales.</li>
+                <li>Cronograma de ejecución y responsabilidades.</li>
+                <li>Asignación de instaladores autorizados (sanitario, eléctrico, gas).</li>
+                <li>Reuniones tripartitas (constructor-propietario-arquitecto).</li>
+                <li>Fijación de precio, pagos y multas por incumplimiento.</li>
               </ul>
             </div>
           </div>
@@ -1857,18 +1786,6 @@
       initSession();
       renderAll();
       attachRegionFilters();
-    });
-
-    // Tabs logic
-    document.querySelectorAll('.tab-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        
-        btn.classList.add('active');
-        const target = document.getElementById(btn.getAttribute('data-target'));
-        if (target) target.classList.add('active');
-      });
     });
   </script>
 
