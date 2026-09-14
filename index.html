@@ -1531,9 +1531,12 @@
       };
     }
 
+    let lastScrollPosition = 0;
+
     function showPropertyDetail(id) {
       const prop = properties.find(p => p.id === id);
       if (!prop) return;
+      lastScrollPosition = window.scrollY || document.documentElement.scrollTop;
       document.getElementById('homeView').style.display = 'none';
       document.getElementById('adminView').style.display = 'none';
       const detailDiv = document.getElementById('detailView');
@@ -1599,6 +1602,7 @@
         document.getElementById('homeView').style.display = 'block';
         document.onkeydown = null;
         renderAll();
+        window.scrollTo({ top: lastScrollPosition, behavior: 'instant' });
       });
       attachCardEvents();
       document.getElementById('contactLeadBtn')?.addEventListener('click', () => alert('✅ Mensaje recibido. Te contactaremos a la brevedad.'));
