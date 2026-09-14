@@ -409,8 +409,8 @@
   {
     "id": 12,
     "title": "Casa Aislada de Un Piso en Buin",
-    "transaction": "Arriendo",
-    "price": 890000,
+    "transaction": "Venta",
+    "price": 209000000,
     "beds": 3,
     "baths": 3,
     "area": 140,
@@ -420,7 +420,7 @@
     "address": "Santiago, Chile",
     "featured": false,
     "agent": "Aníbal Rubí",
-    "description": "Excelente casa aislada de un piso en arriendo, con inmejorable ubicación en Buin.<br><br>Cuenta con 3 dormitorios, 3 baños (dos de ellos en suite), un amplio living comedor, cómoda sala de estar y una cocina totalmente remodelada. Adicionalmente, la propiedad dispone de una casa interior.<br><br>Posee 140 m² construidos (sin incluir la casa interior) sobre un terreno de 400 m² y estacionamiento con capacidad para tres vehículos.",
+    "description": "Sólida casa aislada de un piso en venta, con inmejorable ubicación en Buin.<br><br>Cuenta con 3 dormitorios (dos de ellos en suite), 3 baños totalmente remodelados, gran living-comedor, sala de estar, termo eléctrico y amplia cocina totalmente remodelada con extensa loggia. Adicionalmente, la propiedad dispone de una casa interior.<br><br>Posee aproximadamente 140 m² construidos sobre un terreno de 420 m² y estacionamiento para varios vehículos.",
     "images": [
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/1.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/2.jpeg",
@@ -441,12 +441,12 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/17.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa12/18.jpeg"
     ],
-    "priceDisplay": "UF 23,70",
+    "priceDisplay": "UF 5.500.-",
     "highlights": [
-      "Cocina totalmente remodelada",
-      "Dos dormitorios en suite",
+      "Cocina y baños totalmente remodelados",
+      "Dos de los tres dormitorios en suite",
       "Casa interior adicional",
-      "Estacionamiento para 3 vehículos"
+      "Estacionamientos para varios vehículos"
     ]
   },
   {
