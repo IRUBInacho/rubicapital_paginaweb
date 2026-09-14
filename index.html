@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description"
-    content="Rubí Kapital - Corretaje premium en Chile. Propiedades seleccionadas para venta y arriendo: casas, departamentos, oficinas y más. Confianza y transparencia.">
-  <title>Rubí Kapital | Propiedades Premium en Chile</title>
+    content="RUBI CAPITAL INMOBILIARIO - Corretaje premium en Chile. Propiedades seleccionadas para venta y arriendo: casas, departamentos, oficinas y más. Confianza y transparencia.">
+  <title>RUBI CAPITAL INMOBILIARIO | Propiedades Premium en Chile</title>
   <!-- Google Fonts & Icons -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
@@ -1117,7 +1117,7 @@
     <!-- NAVBAR -->
     <nav class="main-navbar">
       <div class="container navbar-container">
-        <div class="navbar-logo">Rubí Kapital</div>
+        <div class="navbar-logo">RUBI CAPITAL INMOBILIARIO</div>
         <button class="menu-toggle" id="menuToggleBtn" aria-label="Abrir menú">
           <span class="hamburger-line"></span>
           <span class="hamburger-line"></span>
@@ -1125,7 +1125,7 @@
         </button>
         <div class="navbar-menu" id="navbarMenu">
           <a href="#" class="nav-link" data-section="home">Inicio</a>
-          <a href="#" class="nav-link" data-section="about">Why Rubí Kapital?</a>
+          <a href="#" class="nav-link" data-section="about">Why RUBI CAPITAL INMOBILIARIO?</a>
           <a href="#" class="nav-link" data-section="solutions">Soluciones</a>
           <button id="loginBtnNav" class="btn-outline"><i class="fas fa-user"></i> Iniciar Sesión</button>
           <span id="userStatusSpan" style="font-size: 0.8rem; font-weight: 500;"></span>
@@ -1137,7 +1137,7 @@
     <div id="loginModal" class="modal">
       <div class="modal-content">
         <i class="fas fa-building" style="font-size: 2rem; color:#C7B28B;"></i>
-        <h3 style="margin: 16px 0;">Acceso Rubí Kapital</h3>
+        <h3 style="margin: 16px 0;">Acceso RUBI CAPITAL INMOBILIARIO</h3>
         <p>Selecciona tu perfil para continuar</p>
         <div class="role-buttons">
           <button id="loginAsAgent" class="btn-primary">Soy Agente</button>
@@ -1228,7 +1228,7 @@
                   constantes incumplimientos que ponen en riesgo su patrimonio.
                 </p>
                 <p style="margin-bottom: 24px;">
-                  Ante esta realidad, en <strong>Rubí Kapital</strong> no ofrecemos una intermediación genérica.
+                  Ante esta realidad, en <strong>RUBI CAPITAL INMOBILIARIO</strong> no ofrecemos una intermediación genérica.
                   Integramos una mirada legal, técnica y comercial para brindar <strong>protección absoluta</strong> en
                   cada etapa de tu proyecto.
                 </p>
@@ -1243,7 +1243,7 @@
             <div>
               <img
                 src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200"
-                alt="Aníbal Rubí - Rubí Kapital"
+                alt="Aníbal Rubí - RUBI CAPITAL INMOBILIARIO"
                 style="width: 100%; height: auto; max-height: 680px; object-fit: cover; border-radius: 32px; box-shadow: 0 25px 60px rgba(0,0,0,0.08);">
             </div>
           </div>
@@ -1334,7 +1334,7 @@
   <footer>
     <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 32px;">
       <div>
-        <h3 style="font-family: 'Cormorant Garamond';">Rubí Kapital</h3>
+        <h3 style="font-family: 'Cormorant Garamond';">RUBI CAPITAL INMOBILIARIO</h3>
         <p>Corretaje premium en Chile<br>Venta y arriendo de propiedades</p>
       </div>
       <div>
@@ -1347,7 +1347,7 @@
         <p>Política de privacidad<br>Términos y condiciones</p>
       </div>
     </div>
-    <div style="text-align: center; margin-top: 48px; font-size: 0.75rem;">© 2025 Rubí Kapital – Confianza y
+    <div style="text-align: center; margin-top: 48px; font-size: 0.75rem;">© 2025 RUBI CAPITAL INMOBILIARIO – Confianza y
       transparencia</div>
   </footer>
 
@@ -1650,7 +1650,7 @@
       document.getElementById("adminList").innerHTML = properties.map(p => `<div style="display:flex; justify-content:space-between; padding:12px; border-bottom:1px solid #eee; flex-wrap:wrap;"><span>${p.title} - ${p.city}</span><div><button class="editProp" data-id="${p.id}">✏️</button><button class="deleteProp" data-id="${p.id}">🗑️</button></div></div>`).join('');
       document.querySelectorAll('.editProp').forEach(btn => btn.addEventListener('click', (e) => { const id = parseInt(btn.dataset.id); const newTitle = prompt("Nuevo título", properties.find(p => p.id === id).title); if (newTitle) { properties.find(p => p.id === id).title = newTitle; saveProperties(); renderAdmin(); renderAll(); } }));
       document.querySelectorAll('.deleteProp').forEach(btn => btn.addEventListener('click', (e) => { if (confirm("Eliminar?")) { properties = properties.filter(p => p.id !== parseInt(btn.dataset.id)); saveProperties(); renderAdmin(); renderAll(); } }));
-      document.getElementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id: newId, title: "Nueva Propiedad", transaction: "Venta", price: 150000000, beds: 2, baths: 2, area: 80, parking: 1, type: "Departamento", city: "Santiago", address: "Nueva dirección", images: ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured: false, agent: "Rubí Kapital" }); saveProperties(); renderAdmin(); renderAll(); };
+      document.getElementById("addPropBtn").onclick = () => { const newId = Date.now(); properties.push({ id: newId, title: "Nueva Propiedad", transaction: "Venta", price: 150000000, beds: 2, baths: 2, area: 80, parking: 1, type: "Departamento", city: "Santiago", address: "Nueva dirección", images: ["https://images.pexels.com/photos/2587054/pexels-photo-2587054.jpeg"], featured: false, agent: "RUBI CAPITAL INMOBILIARIO" }); saveProperties(); renderAdmin(); renderAll(); };
     }
 
     function renderAll() { renderFeaturedAndAll(); if (document.getElementById("homeView").style.display !== "none") attachRegionFilters(); }
