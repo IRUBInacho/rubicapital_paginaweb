@@ -728,14 +728,40 @@
         border-radius: 24px !important;
       }
 
-      .solutions-grid,
+      .solutions-grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding-bottom: 24px;
+        justify-content: flex-start;
+        scrollbar-width: thin;
+        scrollbar-color: #C7B28B transparent;
+      }
+      
+      .solutions-grid::-webkit-scrollbar {
+        height: 6px;
+      }
+      .solutions-grid::-webkit-scrollbar-thumb {
+        background: #C7B28B;
+        border-radius: 3px;
+      }
+
+      .solution-card {
+        max-width: 85%;
+        flex: 0 0 85%;
+        scroll-snap-align: center;
+      }
+
       .trust-icons {
         flex-direction: column;
         align-items: stretch;
         gap: 24px;
       }
 
-      .solution-card,
       .trust-item {
         max-width: 100%;
         text-align: left;
