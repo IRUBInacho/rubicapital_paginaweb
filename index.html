@@ -1566,7 +1566,7 @@
 
     function renderCard(p) {
       const priceText = p.priceDisplay ? p.priceDisplay : new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP', minimumFractionDigits: 0 }).format(p.price);
-      const parkingHtml = p.parking > 0 ? `<span>🚗 Estacionamiento</span>` : '';
+      const parkingHtml = p.parking > 0 ? `<span>🚗 Estacionamientos</span>` : '';
       const areaHtml = p.area > 0 ? `<span>📐 ${p.area} m²</span>` : '';
       const bedsHtml = p.beds > 0 ? `<span>🛏 ${p.beds} dorm</span>` : '';
       const bathsHtml = p.baths > 0 ? `<span>🛁 ${p.baths} baños</span>` : '';
@@ -1674,7 +1674,7 @@
               ${prop.beds > 0 ? `<div class="spec-chip">🛏 ${prop.beds} dorm.</div>` : ''}
               ${prop.baths > 0 ? `<div class="spec-chip">🛁 ${prop.baths} baños</div>` : ''}
               ${prop.area > 0 ? `<div class="spec-chip">📐 ${prop.area} m²</div>` : ''}
-              ${prop.parking > 0 ? `<div class="spec-chip">🚗 Estacionamiento</div>` : ''}
+              ${prop.parking > 0 ? `<div class="spec-chip">🚗 Estacionamientos</div>` : ''}
               <div class="spec-chip">📍 ${prop.city}</div>
             </div>
 
