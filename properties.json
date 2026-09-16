@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Sólida Casa Esquina de Dos Pisos en Buin",
     "transaction": "Venta",
-    "price": 66500000,
+    "price": 76000000,
     "beds": 3,
     "baths": 2,
     "area": 0,
@@ -27,23 +27,23 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa1/10.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa1/11.jpeg"
     ],
-    "priceDisplay": "UF 1.750",
+    "priceDisplay": "UF 2.000.-",
     "highlights": [
       "Ampliación 100% regularizada",
       "Sólida en ambos pisos",
       "Dormitorio principal en primer nivel",
-      "Estacionamiento privado"
+      "Estacionamientos privados"
     ]
   },
   {
     "id": 2,
     "title": "Casa Aislada de Un Piso en Osorno",
     "transaction": "Venta",
-    "price": 114000000,
+    "price": 133000000,
     "beds": 3,
     "baths": 1,
     "area": 0,
-    "parking": 0,
+    "parking": 2,
     "type": "Casa",
     "city": "Osorno",
     "address": "Santiago, Chile",
@@ -62,52 +62,24 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa2/9.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa2/10.jpeg"
     ],
-    "priceDisplay": "UF 3.000",
+    "priceDisplay": "UF 3.500.-",
     "highlights": [
       "Excelente estado de conservación",
       "Construcción aislada (mayor privacidad)",
       "Acceso directo a autopistas principales",
-      "Cercana a servicios y aeropuerto"
-    ]
-  },
-  {
-    "id": 3,
-    "title": "Casa Esquina con Terraza de Maderas Nobles – Paine",
-    "transaction": "Venta",
-    "price": 76000000,
-    "beds": 2,
-    "baths": 2,
-    "area": 0,
-    "parking": 0,
-    "type": "Casa",
-    "city": "Paine",
-    "address": "Santiago, Chile",
-    "featured": true,
-    "agent": "Aníbal Rubí",
-    "description": "Moderna casa esquina construida hace solo 6 años, destacando por su impecable estado de conservación y acabados superiores.<br><br>Disfruta de un amplio living-comedor que se integra a una cocina americana equipada con aire acondicionado, fluyendo hacia una espectacular y gran terraza techada con maderas nobles.<br><br>Ubicada en un sector de alta demanda en Paine. Además, es apta para financiamiento mediante subsidio habitacional.",
-    "images": [
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa3/1.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa3/2.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa3/3.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa3/4.jpeg"
-    ],
-    "priceDisplay": "UF 2.000",
-    "highlights": [
-      "Gran terraza techada con maderas nobles",
-      "Aire acondicionado y sistema de alarma",
-      "Construcción semi-nueva (6 años)",
-      "Acepta subsidio habitacional"
+      "Cercana a servicios y aeropuerto",
+      "Estacionamientos privados"
     ]
   },
   {
     "id": 4,
     "title": "Casa de Dos Pisos en Exclusivo Condominio – Buin",
     "transaction": "Venta",
-    "price": 98800000,
+    "price": 114000000,
     "beds": 3,
     "baths": 2,
     "area": 100,
-    "parking": 1,
+    "parking": 2,
     "type": "Casa",
     "city": "Buin",
     "address": "Santiago, Chile",
@@ -133,12 +105,12 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa4/16.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa4/17.jpeg"
     ],
-    "priceDisplay": "UF 2.600",
+    "priceDisplay": "UF 3.000.-",
     "highlights": [
       "Exteriores y quincho en maderas nobles",
       "Ampliación 100% regularizada",
       "Condominio con acceso controlado",
-      "Estacionamiento privado"
+      "Estacionamientos privados"
     ]
   },
   {
@@ -149,7 +121,7 @@
     "beds": 4,
     "baths": 2,
     "area": 120,
-    "parking": 1,
+    "parking": 2,
     "type": "Casa",
     "city": "San Ramón",
     "address": "Santiago, Chile",
@@ -177,7 +149,7 @@
       "Distribución dual (2 cocinas y 2 living)",
       "Gran capacidad de almacenamiento (bodega)",
       "A pasos de Autopista Vespucio Sur",
-      "Estacionamiento privado"
+      "Estacionamientos privados"
     ]
   },
   {
@@ -188,7 +160,7 @@
     "beds": 4,
     "baths": 3,
     "area": 0,
-    "parking": 1,
+    "parking": 2,
     "type": "Casa",
     "city": "Buin",
     "address": "Santiago, Chile",
@@ -228,7 +200,7 @@
     "beds": 2,
     "baths": 1,
     "area": 0,
-    "parking": 1,
+    "parking": 2,
     "type": "Casa",
     "city": "Paine",
     "address": "Santiago, Chile",
@@ -259,7 +231,7 @@
       "Excelente estado de conservación",
       "Cocina completamente amoblada",
       "Dormitorios con closets integrados",
-      "Estacionamiento privado"
+      "Estacionamientos privados"
     ]
   },
   {
@@ -270,7 +242,7 @@
     "beds": 3,
     "baths": 2,
     "area": 0,
-    "parking": 0,
+    "parking": 2,
     "type": "Casa",
     "city": "Buin",
     "address": "Santiago, Chile",
@@ -301,7 +273,8 @@
       "Patio techado con maderas nobles",
       "Suite principal con doble clóset",
       "Cocina amoblada y equipada",
-      "A pasos del Metrotren Buin"
+      "A pasos del Metrotren Buin",
+      "Estacionamientos privados"
     ]
   },
   {
@@ -344,7 +317,7 @@
   },
   {
     "id": 10,
-    "title": "Terreno Comercial Esquina en Gran Avenida",
+    "title": "Terreno Comercial Avenida General Baquedano Esquina Gran Avenida",
     "transaction": "Arriendo",
     "price": 1520000,
     "beds": 0,
@@ -369,41 +342,6 @@
       "80 metros de frente por Gran Avenida",
       "Servicios básicos operativos",
       "Rol propio"
-    ]
-  },
-  {
-    "id": 11,
-    "title": "Estilo Colonial con Piscina en Condominio",
-    "transaction": "Venta",
-    "price": 326800000,
-    "beds": 4,
-    "baths": 3,
-    "area": 110,
-    "parking": 3,
-    "type": "Casa",
-    "city": "Santiago",
-    "address": "Santiago, Chile",
-    "featured": false,
-    "agent": "Aníbal Rubí",
-    "description": "Magnífica propiedad de estilo colonial en excelente ubicación al interior de un exclusivo condominio con acceso controlado, emplazada en un generoso terreno de 700 m².<br><br>Sus 110 m² construidos ofrecen cuatro amplios dormitorios con closets, tres baños (uno en suite), gran living comedor, amplia cocina y un espectacular patio coronado por una piscina privada.<br><br>Diseñada para familias que buscan máxima seguridad, amplios espacios exteriores y un nivel de vida superior con capacidad para 3 vehículos.",
-    "images": [
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/1.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/2.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/3.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/4.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/5.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/6.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/7.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/8.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/9.jpeg",
-      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa11/10.jpeg"
-    ],
-    "priceDisplay": "UF 8.600",
-    "highlights": [
-      "Gran terreno de 700 m² con piscina",
-      "Condominio con acceso controlado",
-      "Diseño colonial de un piso",
-      "Estacionamiento para 3 vehículos"
     ]
   },
   {
@@ -453,7 +391,7 @@
     "id": 13,
     "title": "Amplia Propiedad Comercial en Paine",
     "transaction": "Arriendo",
-    "price": 2300000,
+    "price": 2200000,
     "beds": 4,
     "baths": 4,
     "area": 150,
@@ -479,7 +417,7 @@
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/12.jpeg",
       "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa13/13.jpeg"
     ],
-    "priceDisplay": "UF 61,29",
+    "priceDisplay": "$ 2.200.000.-",
     "highlights": [
       "Ubicación estratégica frente a SAPU Paine",
       "4 amplias oficinas y 4 baños",
