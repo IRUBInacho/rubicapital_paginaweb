@@ -1192,28 +1192,10 @@
           <a href="#" class="nav-link" data-section="home">Inicio</a>
           <a href="#" class="nav-link" data-section="about">Why RUBI CAPITAL INMOBILIARIO?</a>
           <a href="#" class="nav-link" data-section="solutions">Soluciones</a>
-          <button id="loginBtnNav" class="btn-outline"><i class="fas fa-user"></i> Iniciar Sesión</button>
           <span id="userStatusSpan" style="font-size: 0.8rem; font-weight: 500;"></span>
         </div>
       </div>
     </nav>
-
-    <!-- MODAL LOGIN -->
-    <div id="loginModal" class="modal">
-      <div class="modal-content">
-        <i class="fas fa-building" style="font-size: 2rem; color:#C7B28B;"></i>
-        <h3 style="margin: 16px 0;">Acceso RUBI CAPITAL INMOBILIARIO</h3>
-        <p>Selecciona tu perfil para continuar</p>
-        <div class="role-buttons">
-          <button id="loginAsAgent" class="btn-primary">Soy Agente</button>
-          <button id="loginAsClient" class="btn-outline">Soy Cliente</button>
-        </div>
-        <p style="margin-top: 20px; font-size: 0.7rem;">Demo: agente → panel administración, cliente → vista estándar
-        </p>
-        <button id="closeModalBtn"
-          style="margin-top: 20px; background: none; border: none; text-decoration: underline; cursor: pointer;">Cerrar</button>
-      </div>
-    </div>
 
     <!-- HOME VIEW (default) -->
     <div id="homeView">
@@ -1791,10 +1773,6 @@
     document.getElementById("scrollToPropertiesBtn")?.addEventListener("click", () => document.getElementById("allPropertiesGrid").scrollIntoView({ behavior: "smooth" }));
     document.getElementById("ownerLeadBtn")?.addEventListener("click", () => window.open("https://wa.me/56998642119?text=Necesito%20asesoría", "_blank"));
     document.querySelectorAll(".nav-link").forEach(link => link.addEventListener("click", (e) => { e.preventDefault(); const section = link.dataset.section; document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; document.getElementById("detailView").style.display = "none"; if (section === "about") document.getElementById("aboutSection").scrollIntoView({ behavior: "smooth" }); else if (section === "solutions") document.getElementById("solutionsSection").scrollIntoView({ behavior: "smooth" }); else window.scrollTo({ top: 0, behavior: "smooth" }); renderAll(); }));
-    document.getElementById("loginBtnNav").addEventListener("click", () => document.getElementById("loginModal").style.display = "flex");
-    document.getElementById("closeModalBtn").addEventListener("click", () => document.getElementById("loginModal").style.display = "none");
-    document.getElementById("loginAsAgent").addEventListener("click", () => { isAgentLogged = true; localStorage.setItem("agent_logged", "true"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; document.getElementById("homeView").style.display = "none"; document.getElementById("adminView").style.display = "block"; renderAdmin(); });
-    document.getElementById("loginAsClient").addEventListener("click", () => { isAgentLogged = false; localStorage.removeItem("agent_logged"); updateNavUI(); document.getElementById("loginModal").style.display = "none"; alert("Bienvenido, ahora visualizas como cliente. Puedes explorar propiedades."); document.getElementById("homeView").style.display = "block"; document.getElementById("adminView").style.display = "none"; renderAll(); });
 
     // Mobile hamburger menu toggle
     const menuToggleBtn = document.getElementById("menuToggleBtn");
@@ -1805,7 +1783,7 @@
         menuToggleBtn.classList.toggle("active");
         navbarMenu.classList.toggle("active");
       });
-      document.querySelectorAll(".navbar-menu .nav-link, #loginBtnNav").forEach(el => {
+      document.querySelectorAll(".navbar-menu .nav-link").forEach(el => {
         el.addEventListener("click", () => {
           menuToggleBtn.classList.remove("active");
           navbarMenu.classList.remove("active");
