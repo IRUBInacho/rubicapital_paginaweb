@@ -545,5 +545,132 @@
       "Acceso por dos calles",
       "Medidores CGE y Aguas Andinas en ambos accesos"
     ]
+  },
+  {
+    "id": 17,
+    "title": "Terreno Esquina Comercial en Buin",
+    "transaction": "Arriendo",
+    "price": 646000,
+    "beds": 0,
+    "baths": 0,
+    "area": 300,
+    "parking": 0,
+    "type": "Terreno",
+    "city": "Buin",
+    "address": "Santiago, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Excelente terreno esquina de carácter comercial en Buin, con una superficie de aproximadamente 300 metros cuadrados.<br><br>Su inmejorable ubicación en Maipú esquina Freire lo sitúa frente al Supermercado Cugat y a pasos del Supermercado Lider.<br><br>Además, cuenta con excelente conectividad con buses directos a Santiago.",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/1.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/2.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/3.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/4.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/5.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/6.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/7.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa17/8.jpeg"
+    ],
+    "priceDisplay": "UF 17,00.-",
+    "highlights": [
+      "300 metros cuadrados aprox.",
+      "Terreno esquina comercial",
+      "Frente a Supermercado Cugat y a pasos de Lider"
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Propiedad Comercial en Ñuñoa",
+    "transaction": "Venta",
+    "price": 1140000000,
+    "beds": 0,
+    "baths": 0,
+    "area": 300,
+    "parking": 0,
+    "type": "Comercial",
+    "city": "Ñuñoa",
+    "address": "Santiago, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Excelente propiedad comercial en Ñuñoa, con una superficie de aproximadamente 300 metros cuadrados.<br><br>Ubicación privilegiada a pasos de Irarrázaval esquina Suecia, colindante con Banco de Chile y a pasos de Supermercado Lider, Caja Los Andes y otros bancos.<br><br>Ubicada en una zona altamente comercial, a solo una cuadra de la estación de Metro Chile España. Actualmente cuenta con tres arrendatarios.",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/1.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/2.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/3.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/4.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/5.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/6.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/7.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/8.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/9.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/10.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa18/11.jpeg"
+    ],
+    "priceDisplay": "UF 30.000.-",
+    "highlights": [
+      "A pasos de Irarrázaval y Metro Chile España",
+      "Zona comercial",
+      "Con 3 arrendatarios actuales"
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Propiedad Comercial en el Centro de Buin",
+    "transaction": "Venta",
+    "price": 1102000000,
+    "beds": 0,
+    "baths": 0,
+    "area": 1840,
+    "parking": 0,
+    "type": "Comercial",
+    "city": "Buin",
+    "address": "Santiago, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Amplia propiedad comercial en el centro de Buin, con una gran superficie de aproximadamente 1.840 metros cuadrados.<br><br>Destaca por su doble acceso por Calle Bernardino Bravo y Calle Estadio.<br><br>Excelente ubicación frente a servicentro Shell, a pasos de servicentro COPEC y de la Ruta 5 Sur. Actualmente cuenta con locales comerciales arrendados.",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/1.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/2.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/3.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/4.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/5.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/6.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/7.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/8.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/9.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/10.jpeg",
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa19/11.jpeg"
+    ],
+    "priceDisplay": "UF 29.000.-",
+    "highlights": [
+      "1.840 metros cuadrados aprox.",
+      "Doble acceso por Bernardino Bravo y Estadio",
+      "Locales comerciales arrendados"
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Parcela Valle El Cristo en Rancagua",
+    "transaction": "Venta",
+    "price": 53200000,
+    "beds": 0,
+    "baths": 0,
+    "area": 5000,
+    "parking": 0,
+    "type": "Parcela",
+    "city": "Rancagua",
+    "address": "Rancagua, Chile",
+    "featured": false,
+    "agent": "Aníbal Rubí",
+    "description": "Excelente oportunidad de inversión en Parcelas Valle El Cristo, Rancagua.<br><br>Parcela de 5.000 metros cuadrados con derechos de agua y títulos legales al día. Cuenta con conexiones listas para la instalación de medidores de agua potable (APR) y energía eléctrica (CGE) en el acceso de la parcela.<br><br>Ubicada en Camino Longitudinal antiguo Ruta H-190 N° 9450, acceso por paso bajo nivel hacia Graneros.<br><br>Valor de mercado: UF 2.000.- / Precio de venta rebajado a UF 1.400.-",
+    "images": [
+      "https://fdfpmwlyjnnxvppqdvyv.supabase.co/storage/v1/object/public/fotos%20casa%20rubi%20kapital/CASAS_OPTIMIZADAS/casa20/1.jpeg"
+    ],
+    "priceDisplay": "UF 1.400.-",
+    "highlights": [
+      "Parcela de 5.000 metros cuadrados",
+      "Derechos de agua incluidos",
+      "Conexiones para agua y luz listas en el acceso"
+    ]
   }
 ]
